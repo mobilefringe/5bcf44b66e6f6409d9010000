@@ -121,7 +121,7 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                         href: "",
                         sub_menu: [
                             {
-                                name: "nav.scoop",
+                                name: "nav.gift_card",
                                 href: "/southland-scoop"
                             },
                             {
