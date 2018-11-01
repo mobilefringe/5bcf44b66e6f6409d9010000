@@ -140,13 +140,15 @@
                     var pageCategory = this.currentStore.categories[1];
                     category = this.findCategoryById(pageCategory)
                     if(category){
-                    return category.name
+                        return category.name
                     }
                 },
                 storeCategory() {
                     var currentStoreCategory = this.currentStore.categories[0];
                     category = this.findCategoryById(currentStoreCategory)
-                    return category.name
+                    if(category){
+                        return category.name
+                    }
                 }
             },
             methods: {
