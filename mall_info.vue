@@ -90,7 +90,7 @@
                     console.log("pages_json", pages_json);
                     if(pages_json && pages_json.length>0) {
                         _.forEach(pages_json, function (value, key) {
-                            if ( _.includes([2], key)) {
+                            if (value &&  _.includes([2], key)) {
                                 value.isLast = true;
                             }
                         });
