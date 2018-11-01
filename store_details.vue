@@ -138,7 +138,7 @@
                 ]),
                 pageCategory() {
                     var pageCategory = this.currentStore.categories[1];
-                    category = this.findCategoryById(pageCategory)
+                    var category = this.findCategoryById(pageCategory)
                     if(category){
                         return category.name
                     }
