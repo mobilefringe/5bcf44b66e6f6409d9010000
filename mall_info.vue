@@ -68,6 +68,7 @@
                     } else {
                         this.pageBanner = { "image_url": "https://via.placeholder.com/1920x300" }
                     }
+                    console.log("response", response)
                     if(response) {
                         this.leasingContent = response[1].data;
                         console.log("leasingContent", leasingContent)
