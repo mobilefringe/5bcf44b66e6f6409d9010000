@@ -68,12 +68,13 @@
                     } else {
                         this.pageBanner = { "image_url": "https://via.placeholder.com/1920x300" }
                     }
-
+                    if(response) {
                     this.leasingContent = response[1].data;
                     this.leasingContent.isActive = true;
                     this.marketingContent = response[2].data;
                     this.areaContent = response[3].data;
                     this.pageContent = this.leasingContent;
+                    }
                     this.dataLoaded = true;
                 });
             },
@@ -101,7 +102,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/"+Site.subdomain+"-leasing.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/southland-marketing-partners.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/"+Site.subdomain+"-area-info.json"})]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/"+Site.subdomain+"-leasing.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/"+Site.subdomain+"-marketing-partners.json"}), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/"+Site.subdomain+"-area-info.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
