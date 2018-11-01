@@ -12,7 +12,7 @@
         		</div>
         		<div class="site_container">
                     <div class="program_header_container information hidden_phone">
-        				<div class="program_button_container animated_btn" v-for="item in pages" @click="selectContent(item)" :class="{ active: item.isActive, last: item.isLast }">
+        				<div class="program_button_container animated_btn" v-for="item in pages" @click="selectContent(item)" v-if="item" :class="{ active: item.isActive, last: item.isLast }">
 
         				    <span v-if="locale=='en-ca'">{{ item.title }}</span>
 							<span v-else>{{ item.title_2 }}</span>
