@@ -60,6 +60,7 @@
                         { 'label': 'Southland Scoop', 'value': 'scoop', 'disabled': false }
                     ],
                     selected: { 'label': 'Kids Club', 'value': 'club', 'disabled': true },
+                    site: Site
                 }
             },
             created(){
