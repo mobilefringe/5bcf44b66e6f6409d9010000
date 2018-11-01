@@ -142,7 +142,7 @@
                     if(category){
                        category = category.name
                     }
-                    return category.name
+                    return category
                 },
                 storeCategory() {
                     var currentStoreCategory = this.currentStore.categories[0];
