@@ -251,7 +251,7 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
         methods: {
             loadData: async function() {
                 try {
-                    await this.$store.dispatch('initializeApi', { site: "southland", version: "v4" });
+                    await this.$store.dispatch('initializeApi', { site: "countryclub", version: "v4" });
                     await Promise.all([this.$store.dispatch("getData", "property")]);
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData", "categories")]);
