@@ -86,7 +86,16 @@
                 ]),
                 pages() {
                     var pages_json = [];
-                    pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                    if(this.leasingContent) {
+                        pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                    }
+                    if(this.leasingContent) {
+                        pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                    }
+                    if(this.leasingContent) {
+                        pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                    }
+                    
                     _.forEach(pages_json, function (value, key) {
                         if ( _.includes([2], key)) {
                             value.isLast = true;
