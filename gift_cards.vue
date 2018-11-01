@@ -79,7 +79,9 @@
                         try {
                             this.pageBody = response[1].data
                             // this.pageBody = response[1].data.subpages[0]
-                            this.pageImage = "//www.mallmaverick.com" + this.pageBody.image_url
+                            if(this.pageBody.image_url){
+                                this.pageImage = "//www.mallmaverick.com" + this.pageBody.image_url
+                            }
                         } catch (e) {
                             
                         }
