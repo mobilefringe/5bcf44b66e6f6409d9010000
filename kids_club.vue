@@ -12,7 +12,7 @@
         		</div>
         		<div class="site_container">
                     <div class="program_header_container hidden_phone">
-                        <router-link :to="'/pages/'+site.subdomain+'-gift-cards'">
+                        <router-link :to="'/gift-cards'">
         				    <div class="program_button_container animated_btn">
         				        {{ $t("programs_page.gift_title") }}
         				    </div>
