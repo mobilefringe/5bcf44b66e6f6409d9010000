@@ -79,7 +79,7 @@
                         try {
                             this.pageBody = response[1].data
                             // this.pageBody = response[1].data.subpages[0]
-                            this.pageImage = "//www.mallmaverick.com"
+                            this.pageImage = "//www.mallmaverick.com" + response[1].data.image_url
                         } catch (e) {
                             
                         }
