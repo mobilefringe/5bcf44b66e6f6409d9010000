@@ -30,7 +30,7 @@
         			        </div>
         			    </div>
         			   <div class="col-md-6 col-lg-8">
-        			       <img class="max_width" :src="'https://mallmaverick.com'+pageContent.image_ur"l alt="" />
+        			       <img class="max_width" :src="'https://mallmaverick.com'+pageContent.image_url alt="" />
         			   </div>
         		    </div>
                 </div>
