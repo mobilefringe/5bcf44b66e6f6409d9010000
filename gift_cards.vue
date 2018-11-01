@@ -34,7 +34,7 @@
         			    <div :class="{col-md-8: pageImage, col-md-12: !pageImage}" v-if="pageBody">
         			        <div class="" v-html="pageBody.body"></div>
         			    </div>
-        			   <div class="col-md-4">
+        			   <div class="col-md-4" v-if="pageImage">
         			       <img class="max_width" src="http://placehold.it/744x980" alt="" />
         			   </div>
         		    </div>
