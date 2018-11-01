@@ -88,13 +88,11 @@
                     var pages_json = [];
                     pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
                     console.log("pages_json", pages_json);
-                    if(pages_json && pages_json.length>0) {
-                        _.forEach(pages_json, function (value, key) {
-                            if (value &&  _.includes([2], key)) {
-                                value.isLast = true;
-                            }
-                        });
-                    }
+                    _.forEach(pages_json, function (value, key) {
+                        if (value &&  _.includes([2], key)) {
+                            value.isLast = true;
+                        }
+                    });
                     return pages_json
                 },
                 dropDownSelect() {
