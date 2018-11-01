@@ -45,7 +45,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "json!site.json"], function(Vue, Vuex, Site) {
+    define(["Vue", "vuex", "json!site.json"], function(Vue, Vuex,) {
         return Vue.component("scoop-component", {
             template: template, // the variable template will be injected
             data: function() {
