@@ -70,6 +70,7 @@
                     }
                     if(response) {
                         this.leasingContent = response[1].data;
+                        console.log("leasingContent", leasingContent)
                         this.leasingContent.isActive = true;
                         this.marketingContent = response[2].data;
                         this.areaContent = response[3].data;
