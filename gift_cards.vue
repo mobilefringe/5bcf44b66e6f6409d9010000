@@ -31,7 +31,7 @@
         			<!--    </div>-->
         			<!--</div>-->
         			<div class="row">
-        			    <div :class="{col-md-8: pageImage, col-md-12: !pageImage}" v-if="pageBody">
+        			    <div :class="{'col-md-8': pageImage, 'col-md-12': !pageImage}" v-if="pageBody">
         			        <div class="" v-html="pageBody.body"></div>
         			    </div>
         			   <div class="col-md-4" v-if="pageImage">
