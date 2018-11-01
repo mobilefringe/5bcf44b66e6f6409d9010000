@@ -148,8 +148,9 @@
                     var currentStoreCategory = this.currentStore.categories[0];
                     category = this.findCategoryById(currentStoreCategory)
                     if(category){
-                        return category.name
+                       category = category.name
                     }
+                    return category
                 }
             },
             methods: {
