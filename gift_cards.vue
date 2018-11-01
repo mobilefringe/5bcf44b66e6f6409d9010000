@@ -56,10 +56,10 @@
                     pageBody: null,
                     pageImage: null,
                     pageOptions: [
-                        { 'label': 'Southland Scoop', 'value': 'scoop', 'disabled': true },
+                        { 'label': 'Gift Cards', 'value': 'gift_cards', 'disabled': true },
                         { 'label': 'Kids Club', 'value': 'club', 'disabled': false }
                     ],
-                    selected: { 'label': 'Southland Scoop', 'value': 'scoop', 'disabled': true },
+                    selected: { 'label': 'Southland Scoop', 'value': 'gift_cards', 'disabled': true },
                 }
             },
             created(){
