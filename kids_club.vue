@@ -57,7 +57,7 @@
                     pageImage: null,
                     pageOptions: [
                         { 'label': 'Kids Club', 'value': 'club', 'disabled': true },
-                        { 'label': 'Gift Card', 'value': 'scoop', 'disabled': false }
+                        { 'label': 'Gift Card', 'value': 'gift_cards', 'disabled': false }
                     ],
                     selected: { 'label': 'Kids Club', 'value': 'club', 'disabled': true },
                     site: Site
@@ -118,7 +118,7 @@
                 },
                 selectPage(item) {
                     var item = item.value
-                    if (_.includes(item, "gift-cards")) {
+                    if (_.includes(item, "gift_cards")) {
                         this.$router.push("/gift-cards");
                     }
                     
