@@ -12,7 +12,7 @@
         		</div>
         		<div class="site_container">
                     <div class="program_header_container information hidden_phone">
-        				<div class="program_button_container animated_btn" v-for="item in pages" @click="selectContent(item)" v-if="item" :class="{ active: item.isActive, last: item.isLast }">
+        				<div class="program_button_container animated_btn" v-for="item in pages" @click="selectContent(item)" :class="{ active: item.isActive, last: item.isLast }">
 
         				    <span v-if="locale=='en-ca'">{{ item.title }}</span>
 							<span v-else>{{ item.title_2 }}</span>
@@ -88,7 +88,7 @@
                     var pages_json = [];
                     pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
                     _.forEach(pages_json, function (value, key) {
-                        if (value &&  _.includes([2], key)) {
+                        if ( _.includes([2], key)) {
                             value.isLast = true;
                         }
                     });
@@ -96,7 +96,6 @@
                 },
                 dropDownSelect() {
                     var cats = _.map(this.pages, 'title');
-                    console.log("cats", cats);
                     return cats;
                 }
             },
@@ -111,9 +110,7 @@
                 },
                 selectContent(item) {
                     _.forEach(this.pages, function (value, key) {
-                        if(value){
-                            value.isActive = false;
-                        }
+                        value.isActive = false;
                     });
                     
                     var selected_item = item
