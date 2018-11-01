@@ -11,7 +11,7 @@
         			</div>
         		</div>
         		<div class="site_container">
-        		HI {{promotions.length}}
+        		<!--HI {{promotions.length}}-->
         		    <div v-if="promotions.length == 0" class="row no_promos">
         				<div class="col-md-12"> 
         					<p>{{$t("jobs_page.no_job_message")}}</p>
