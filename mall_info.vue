@@ -97,6 +97,7 @@
                 },
                 dropDownSelect() {
                     var cats = _.map(this.pages, 'title');
+                    console.log("cats", cats);
                     return cats;
                 }
             },
