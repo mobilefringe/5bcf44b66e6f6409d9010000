@@ -11,6 +11,7 @@
         			</div>
         		</div>
         		<div class="site_container">
+        		HI
         		    <div class="job_container" v-if="promotions.length > 0" v-for="promo in promotions">
     		            <div class="hidden_phone jobs_left">
     		                <h2 class="jobs_store_name">{{ promo.store_name }}</h2> 
@@ -29,7 +30,7 @@
     		            </div>
         		    </div>
         			<div v-else class="row no_promos">
-        				<div class="col-md-12"> HI
+        				<div class="col-md-12"> 
         					<p>{{$t("jobs_page.no_job_message")}}</p>
         				</div>
         			</div>
