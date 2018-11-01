@@ -69,11 +69,11 @@
                         this.pageBanner = { "image_url": "https://via.placeholder.com/1920x300" }
                     }
                     if(response) {
-                    this.leasingContent = response[1].data;
-                    this.leasingContent.isActive = true;
-                    this.marketingContent = response[2].data;
-                    this.areaContent = response[3].data;
-                    this.pageContent = this.leasingContent;
+                        this.leasingContent = response[1].data;
+                        this.leasingContent.isActive = true;
+                        this.marketingContent = response[2].data;
+                        this.areaContent = response[3].data;
+                        this.pageContent = this.leasingContent;
                     }
                     this.dataLoaded = true;
                 });
