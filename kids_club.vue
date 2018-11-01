@@ -118,7 +118,7 @@
                 },
                 selectPage(item) {
                     var item = item.value
-                    if (_.includes(item, "scoop")) {
+                    if (_.includes(item, "gift-cards")) {
                         this.$router.push("/gift-cards");
                     }
                     
