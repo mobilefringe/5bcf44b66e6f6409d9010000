@@ -78,7 +78,6 @@
                     var property_name = this.property.name
                     var vm = this;
                     var temp_promo = [];
-                    var temp_job = [];
                     _.forEach(this.processedJobs, function(value, key) {
                         if (value.store != null && value.store != undefined) {
                             value.store_name = value.store.name;
