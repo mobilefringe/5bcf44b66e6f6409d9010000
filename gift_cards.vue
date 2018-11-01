@@ -13,7 +13,7 @@
         		<div class="site_container">
                     <div class="program_header_container hidden_phone">
         				<div class="program_button_container active">
-    				        {{ $t("programs_page.scoop_title") }}
+    				        {{ $t("programs_page.gift_title") }}
         				</div>
         				<router-link to="/kids-club">
         				    <div class="program_button_container animated_btn">
