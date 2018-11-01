@@ -124,10 +124,10 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                                 name: "nav.gift_card",
                                 href: "/pages/country-club-gift-card"
                             },
-                            // {
-                            //     name: "nav.kids_club",
-                            //     href: "/kids-club"
-                            // }
+                            {
+                                name: "nav.kids_club",
+                                href: "/kids-club"
+                            }
                         ]
                     },
                     {
