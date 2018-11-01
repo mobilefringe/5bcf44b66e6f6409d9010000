@@ -29,8 +29,8 @@
         			            <div v-else v-html="pageContent.body_2"></div>
         			        </div>
         			    </div>
-        			   <div class="col-md-6 col-lg-8">
-        			       <img class="max_width" :src="'https://mallmaverick.com'+pageContent.image_url alt="" />
+        			   <div class="col-md-6 col-lg-8" v-if="pageContent.image_url">
+        			       <img class="max_width" :src="'https://mallmaverick.com'+pageContent.image_url" alt="" />
         			   </div>
         		    </div>
                 </div>
