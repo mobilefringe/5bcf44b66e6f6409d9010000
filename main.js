@@ -122,7 +122,7 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                         sub_menu: [
                             {
                                 name: "nav.gift_card",
-                                href: "/pages/country-club-gift-card"
+                                href: "/gift-cards"
                             },
                             {
                                 name: "nav.kids_club",
