@@ -58,7 +58,6 @@
             },
             created(){
                 this.loadData().then(response => {
-                    console.log(" this.findRepoByName('Mall Info Banner')",  this.findRepoByName('Mall Info Banner'))
                     var temp_repo = this.findRepoByName('Mall Info Banner');
                     if (temp_repo) {
                         try {
