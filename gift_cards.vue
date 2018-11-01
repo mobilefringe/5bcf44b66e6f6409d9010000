@@ -46,7 +46,7 @@
 
 <script>
     define(["Vue", "vuex", "json!site.json"], function(Vue, Vuex, Site) {
-        return Vue.component("scoop-component", {
+        return Vue.component("giftcards-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
