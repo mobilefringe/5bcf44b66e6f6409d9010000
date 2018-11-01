@@ -40,7 +40,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-select", "json!site.json"], function(Vue, Vuex, VueSelect) {
+    define(["Vue", "vuex", "vue-select", "json!site.json"], function(Vue, Vuex, VueSelect, Site) {
         return Vue.component("mall-info-component", {
             template: template, // the variable template will be injected
             props:['locale'],
