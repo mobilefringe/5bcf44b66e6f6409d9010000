@@ -30,8 +30,8 @@
         			        <h4 class="margin_40 center bold" v-html="pageHeader.body"></h4>
         			    </div>
         			</div>
-        			<div class="row" v-if="pageBody">
-        			    <div class="col-md-8">
+        			<div class="row">
+        			    <div class="col-md-8" v-if="pageBody">
         			        <div class="" v-html="pageBody.body"></div>
         			    </div>
         			   <div class="col-md-4">
