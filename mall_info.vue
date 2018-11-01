@@ -111,7 +111,9 @@
                 },
                 selectContent(item) {
                     _.forEach(this.pages, function (value, key) {
-                        value.isActive = false;
+                        if(value){
+                            value.isActive = false;
+                        }
                     });
                     
                     var selected_item = item
