@@ -25,17 +25,17 @@
         			    <label style="display: none;" for="pageSelect">Select a Page</label>
         				<v-select v-model="selected" :options="pageOptions" :searchable="false" :on-change="selectPage" class="category-select" inputId="pageSelect"></v-select>
         			</div>
-        			<div v-if="pageHeader" class="row">
-        			    <div class="col-md-12">
-        			        <h4 class="margin_40 center bold" v-html="pageHeader.body"></h4>
-        			    </div>
-        			</div>
-        			<div class="row" v-if="pageBody">
-        			    <div class="col-md-8">
+        			<!--<div v-if="pageHeader" class="row">-->
+        			<!--    <div class="col-md-12">-->
+        			<!--        <h4 class="margin_40 center bold" v-html="pageHeader.body"></h4>-->
+        			<!--    </div>-->
+        			<!--</div>-->
+        			<div class="row">
+        			    <div :class="{'col-md-8': pageImage, 'col-md-12': !pageImage}" v-if="pageBody">
         			        <div class="" v-html="pageBody.body"></div>
         			    </div>
-        			   <div class="col-md-4">
-        			       <img class="max_width" src="http://placehold.it/744x980/bada55" alt="" />
+        			   <div class="col-md-4" v-if="pageImage">
+        			       <img class="max_width" :src="pageImage" alt="" />
         			   </div>
         		    </div>
                 </div>
