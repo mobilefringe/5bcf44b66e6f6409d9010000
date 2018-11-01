@@ -52,7 +52,7 @@
                 return {
                     dataLoaded: false,
                     pageBanner: null,
-                    pageHeader: null,
+                    // pageHeader: null,
                     pageBody: null,
                     pageImage: null,
                     pageOptions: [
