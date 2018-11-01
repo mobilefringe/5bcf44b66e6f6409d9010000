@@ -146,6 +146,10 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                             {
                                 name: "nav.hours",
                                 href: "/hours"
+                            },
+                            {
+                                name: "nav.careers",
+                                href: "/hours"
                             }
                         ]
                     }
