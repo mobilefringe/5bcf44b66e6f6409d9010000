@@ -76,7 +76,7 @@
                         this.pageBanner = { "image_url": "https://via.placeholder.com/1920x300" }
                     }
                     
-                    if (response[1]) {
+                    if (response && response[1]) {
                         try {
                             this.pageHeader = response[1].data
                             this.pageBody = response[1].data.subpages[0]
