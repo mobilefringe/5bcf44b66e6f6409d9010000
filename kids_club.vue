@@ -14,7 +14,7 @@
                     <div class="program_header_container hidden_phone">
                         <router-link :to="'/pages/'+site.subdomain+'-gift-cards'">
         				    <div class="program_button_container animated_btn">
-        				        {{ $t("programs_page.scoop_title") }}
+        				        {{ $t("programs_page.gift_title") }}
         				    </div>
         				</router-link>
         				<div class="program_button_container active">
