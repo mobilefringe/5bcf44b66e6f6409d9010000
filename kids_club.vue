@@ -119,7 +119,7 @@
                 selectPage(item) {
                     var item = item.value
                     if (_.includes(item, "scoop")) {
-                        this.$router.push("/southland-scoop");
+                        this.$router.push("/gift-cards");
                     }
                     
                 }
