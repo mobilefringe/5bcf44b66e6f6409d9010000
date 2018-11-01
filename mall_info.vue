@@ -87,13 +87,13 @@
                 pages() {
                     var pages_json = [];
                     if(this.leasingContent) {
-                        pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                        pages_json = _.concat(pages_json, this.leasingContent)
                     }
-                    if(this.leasingContent) {
-                        pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                    if(this.marketingContent) {
+                        pages_json = _.concat(pages_json, this.marketingContent)
                     }
-                    if(this.leasingContent) {
-                        pages_json = _.concat(pages_json, this.leasingContent, this.marketingContent, this.areaContent)
+                    if(this.areaContent) {
+                        pages_json = _.concat(pages_json,  this.areaContent)
                     }
                     
                     _.forEach(pages_json, function (value, key) {
