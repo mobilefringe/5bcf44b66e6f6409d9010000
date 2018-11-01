@@ -57,7 +57,7 @@
                     pageImage: null,
                     pageOptions: [
                         { 'label': 'Kids Club', 'value': 'club', 'disabled': true },
-                        { 'label': 'Southland Scoop', 'value': 'scoop', 'disabled': false }
+                        { 'label': 'Gift Card', 'value': 'scoop', 'disabled': false }
                     ],
                     selected: { 'label': 'Kids Club', 'value': 'club', 'disabled': true },
                     site: Site
