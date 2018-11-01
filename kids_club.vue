@@ -76,11 +76,22 @@
                         this.pageBanner = { "image_url": "https://via.placeholder.com/1920x300" }
                     }
                     
+                    // if (response && response[1]) {
+                    //     try {
+                    //         this.pageHeader = response[1].data
+                    //         this.pageBody = response[1].data.subpages[0]
+                    //         this.pageImage = "//www.mallmaverick.com"
+                    //     } catch (e) {
+                            
+                    //     }
+                    // }
                     if (response && response[1]) {
                         try {
-                            this.pageHeader = response[1].data
-                            this.pageBody = response[1].data.subpages[0]
-                            this.pageImage = "//www.mallmaverick.com"
+                            this.pageBody = response[1].data
+                            // this.pageBody = response[1].data.subpages[0]
+                            if(this.pageBody.image_url){
+                                this.pageImage = "//www.mallmaverick.com" + this.pageBody.image_url;
+                            }
                         } catch (e) {
                             
                         }
