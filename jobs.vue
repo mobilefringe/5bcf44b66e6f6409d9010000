@@ -12,7 +12,7 @@
         		</div>
         		<div class="site_container">
         		HI {{promotions.length}}
-        		    <div class="job_container" v-if="promotions.length > 0" v-for="promo in promotions">
+        		    <div class="job_container" v-if="promotions.length >= 1" v-for="promo in promotions">
     		            <div class="hidden_phone jobs_left">
     		                <h2 class="jobs_store_name">{{ promo.store_name }}</h2> 
     		            </div>
