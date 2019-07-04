@@ -19,7 +19,7 @@
 				<div class="mobile_header">
 				    <div class="property_logo center-block">
 						<router-link to="/">
-						    <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1562269526000/CCM-Logo-ColorHQ.png" :alt="property.name + ' Logo'"/>
+						    <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1562269526000/CCM-Logo-Color.png" :alt="property.name + ' Logo'"/>
 					    </router-link>
 					</div>
 			        <div id="menu-icon" @click="showMenu = !showMenu" :class="{ open: showMenu }" class="visible_phone hamburger">
