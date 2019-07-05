@@ -64,7 +64,15 @@
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: 'home' });
                     });
-                }
+                },
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
+                        
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
             }
         });
     });
