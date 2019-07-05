@@ -62,7 +62,7 @@
                             
                         }
                     } else {
-                        this.pageBanner = { "image_url": "https://via.placeholder.com/1920x300" }
+                        this.pageBanner = { "image_url": "" }
                     }
 
                     this.dataLoaded = true;
