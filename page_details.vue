@@ -30,7 +30,7 @@
             created() {
                 this.updateCurrentPage(this.id);
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Play Banner');
+                    var temp_repo = this.findRepoByName('Page Banner');
                     if(temp_repo) {
                         try {
                             this.pageBanner = temp_repo.images[0];
