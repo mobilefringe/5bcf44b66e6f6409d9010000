@@ -894,7 +894,7 @@ footer {
         text-align: center;
         h1 {
             margin: 0;
-                text-shadow: 3px 3px 7px rgba(0,0,0,0.8);
+            text-shadow: 3px 3px 7px rgba(0,0,0,0.8);
         }
     }
 }
