@@ -6,12 +6,12 @@
                 <div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
         			<div class="site_container">
         				<div class="header_content caps">
-        					<h1>{{ $t("stores_page.play") }}</h1>
+        					<h1>{{ currentPage.title}}</h1>
         				</div>
         			</div>
         		</div>
                 <div class="site_container">
-    				<div class="pages_content" v-if="currentPage>
+    				<div class="pages_content" v-if="currentPage">
     				    <h3 v-if="locale=='en-ca'">{{ currentPage.title }}</h3>
     				    <h3 v-else>{{ currentPage.title_2 }}</h3>
     					<div class="page_body" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
