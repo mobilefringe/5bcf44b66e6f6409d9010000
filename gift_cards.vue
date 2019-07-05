@@ -64,7 +64,7 @@
             },
             created(){
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Kids Club Banner');
+                    var temp_repo = this.findRepoByName('Gift Card Banner');
                     if (temp_repo) {
                         try {
                             this.pageBanner = temp_repo.images[0];
