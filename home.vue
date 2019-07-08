@@ -52,7 +52,7 @@
                         			<img :src="feature.image_url" alt="">
                         			<div class="feature_item_info" >
                         				<div class="feature_item_content">
-                        					<p v-show="feature.description">{{ feature.description }}</p>
+                        					<p v-if="feature.description">{{ feature.description }}</p>
                         					<h3 >{{ feature.name }}</h3>
                         					<a class="feature_item_link" :href="feature.url">
                         					    <div class="feature_item_more animated_btn" :aria-label="feature.name">View Details</div>
