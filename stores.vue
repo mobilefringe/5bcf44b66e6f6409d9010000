@@ -81,7 +81,7 @@
                     dataLoaded: false,
                     pageBanner : null,
                     search_result : null,
-                    storeFilter: 6439
+                    storeFilter: 6530
                 }
             },
             created (){
