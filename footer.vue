@@ -4,7 +4,7 @@
 		    <div class="footer_logo">
 	            <div class="property_logo">
 			        <router-link to="/">
-			            <img src="https://via.placeholder.com/150x50" alt="Property Logo"/>
+			            <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/jpeg/1564065294000/CCM_Mall_Info_760x600.jpg" alt="Property Logo"/>
 		            </router-link>
 		        </div>    
 		        <div class="center-block">
