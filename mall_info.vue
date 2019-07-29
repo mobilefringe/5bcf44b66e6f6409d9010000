@@ -30,7 +30,7 @@
         			        </div>
         			    </div>
         			   <div class="col-md-6 col-lg-8" v-if="pageContent.image_url">
-        			       <img class="max_width" :src="'https://mallmaverick.com'+pageContent.image_url" alt="" />
+        			       <img class="max_width" :src="pageContent.image_url" alt="" />
         			   </div>
         		    </div>
                 </div>
