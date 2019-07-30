@@ -4,7 +4,7 @@
 		    <div class="footer_logo">
 	            <div class="property_logo">
 			        <router-link to="/">
-			            <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/jpeg/1564501637000/CCM-Logo-ColorHQ copy.jpg" alt="Property Logo"/>
+			            <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/jpeg/1564501767000/CCM-Logo-ColorHQ copy.jpg" alt="Property Logo"/>
 		            </router-link>
 		        </div>    
 		        <div class="center-block">
