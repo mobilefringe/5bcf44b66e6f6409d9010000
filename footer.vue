@@ -4,7 +4,7 @@
 		    <div class="footer_logo">
 	            <div class="property_logo">
 			        <router-link to="/">
-			            <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1562336708799/CCM-Logo-ColorHQ.png" alt="Property Logo"/>
+			            <img src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/jpeg/1564501637000/CCM-Logo-ColorHQ copy.jpg" alt="Property Logo"/>
 		            </router-link>
 		        </div>    
 		        <div class="center-block">
@@ -34,24 +34,5 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "json!site.json"], function (Vue, Vuex, moment, tz, VueMoment, Site) {
-        return Vue.component("footer-component", {
-            template: template, // the variable template will be injected,
-            data: function data() {
-                return {
-                    site:Site
-                    
-                }
-            },
-            props:['footer_menu_items', 'social_media'],
-            computed: {
-                ...Vuex.mapGetters([
-                    'property',
-                ]),
-                copyright_year() {
-                    return moment().year();
-                }
-            }
-        });
-    });
+var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e};define(["Vue","vuex","moment","moment-timezone","vue-moment","json!site.json"],function(e,t,n,o,r,a){return e.component("footer-component",{template:template,data:function(){return{site:a}},props:["footer_menu_items","social_media"],computed:_extends({},t.mapGetters(["property"]),{copyright_year:function(){return n().year()}})})});
 </script>
