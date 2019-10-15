@@ -645,7 +645,8 @@ footer {
         margin: 0;
     }
     .slick-active button {
-        background-color: $primary;
+        // background-color: $primary;
+        background: #000;
         opacity: 1;
     }
     li {
