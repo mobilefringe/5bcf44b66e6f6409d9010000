@@ -22,7 +22,11 @@
                                     <a v-if="currentStore.website" :href="currentStore.website" target="_blank">
                                         <div class="store_website animated_btn caps">{{ $t("stores_page.store_website") }}</div>
                                     </a>
-                                    <div class="store_website animated_btn caps">{{ $t("stores_page.view_map") }}</div>
+                                    <!--<div class="store_website animated_btn caps">{{ $t("stores_page.view_map") }}</div>-->
+                                    
+                                    <router-link :to="'/map">
+        							    <div class="store_website animated_btn caps">{{ $t("stores_page.view_map") }}</div>
+        						    </router-link>
                                 </div>
                             </div>
                             <div class="visible_phone details_store_btn center">
