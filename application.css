@@ -221,10 +221,12 @@ strong, .bold {
         color: #000 !important;
         text-transform: uppercase;
     }
-    .spinner {
-        font-size: 2rem;
-    }
 }
+
+.dropdown-toggle .spinner {
+    font-size: 2rem;
+}
+
 
 /* *** SEARCH COMPONENT *** */
 ul.options-list {
