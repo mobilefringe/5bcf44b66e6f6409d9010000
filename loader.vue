@@ -54,6 +54,5 @@
     }
     .loading-container .vue-simple-spinner-text{
         line-height: 1;
-        font-size:2rem;
     }
 </style>
