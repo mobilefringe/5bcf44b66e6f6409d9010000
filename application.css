@@ -648,6 +648,7 @@ footer {
         background-color: $primary;
         // background: #000;
         opacity: 1;
+        color: white;
     }
     li {
         display: inline-block;
