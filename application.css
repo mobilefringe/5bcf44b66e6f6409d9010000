@@ -656,6 +656,10 @@ footer {
     }
 }
 
+.spinner {
+    font-size: 2rem;
+}
+
 /* --- MASONRY GRID --- */
 .grid {
     margin: 0 auto;
