@@ -221,6 +221,9 @@ strong, .bold {
         color: #000 !important;
         text-transform: uppercase;
     }
+    .spinner {
+        font-size: 2rem;
+    }
 }
 
 /* *** SEARCH COMPONENT *** */
@@ -656,9 +659,7 @@ footer {
     }
 }
 
-.spinner {
-    font-size: 2rem;
-}
+
 
 /* --- MASONRY GRID --- */
 .grid {
