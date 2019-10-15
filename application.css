@@ -668,6 +668,7 @@ footer {
 /* grid-item */
 .grid-sizer, .grid-item {
     width: 33.33%; 
+    
 }
 .grid-item {
     float: left;
@@ -683,6 +684,7 @@ footer {
     display: block;
     width: 100.5%;
     height: 100.5%;
+    background: #000;
 }
 /* --- FEATURE ITEMS --- */
 .feature_item_container {
