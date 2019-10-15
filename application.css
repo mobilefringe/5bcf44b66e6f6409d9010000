@@ -643,11 +643,10 @@ footer {
         font-size: 0;
         padding: 0;
         margin: 0;
-        color: white;
     }
     .slick-active button {
-        // background-color: $primary;
-        background: #000;
+        background-color: $primary;
+        // background: #000;
         opacity: 1;
     }
     li {
