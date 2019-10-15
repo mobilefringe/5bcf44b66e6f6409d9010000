@@ -24,7 +24,7 @@
                                     </a>
                                     <!--<div class="store_website animated_btn caps">{{ $t("stores_page.view_map") }}</div>-->
                                     
-                                    <router-link :to="'/map">
+                                    <router-link :to="/map">
         							    <div class="store_website animated_btn caps">{{ $t("stores_page.view_map") }}</div>
         						    </router-link>
                                 </div>
