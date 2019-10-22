@@ -1795,7 +1795,7 @@ footer {
     }
 }
 
-v-select .spinner {
+.v-select .spinner {
     font-size: 1rem !important;
 } 
 .v-select.category-select {
