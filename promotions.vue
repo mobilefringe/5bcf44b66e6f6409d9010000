@@ -12,7 +12,7 @@
         		</div>
         		<div class="site_container page_content">
         		    <transition-group name="list" tag="div">
-        		        <div v-if="promos.length > 10">
+        		        <div v-if="promos.length > 0">
         					<div class="promo_container" v-for="promo in promos" :key="promo.id">
         					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="promo.image_url"></div>
         					    <div class="promo_img" v-else v-lazy:background-image="promo.promo_image2_url_abs"></div>
