@@ -99,8 +99,14 @@
                             value.name_short_2 = _.truncate(value.name_2, { 'length': 21, 'separator': ' ' });
                             value.description_short = _.truncate(value.description, { 'length': 60, 'separator': ' ' });
                             value.description_short_2 = _.truncate(value.description_2, { 'length': 60, 'separator': ' ' });
-                            if (value.store) {
-                                
+                            if (value.store != null) {
+                                if (_.includes(value.store.store_front_url_abs, "missing")) {
+                                    
+                                } else {
+                                    value.image_url = value.store.store_front_url_abs;
+                                }
+                            } else {
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573071128095/cc_default_img.png"
                             }
                             // if (_.includes(value.image_url, 'missing')) {
                             //     value.image_url = "https://placehold.it/1600x800/757575";
