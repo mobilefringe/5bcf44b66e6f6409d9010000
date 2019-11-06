@@ -1024,7 +1024,7 @@ footer {
         -ms-flex-pack: center;
         justify-content: center;
         float: right;
-        outline: solid 20px #FFF;
+        // outline: solid 20px #FFF;
         border: solid 2px $line;
         background: #FFF;    
     }
@@ -1035,7 +1035,7 @@ footer {
         min-height: 364px;
         display: inline-block;
         position: relative;
-        outline: solid 16px #FFF;
+        // outline: solid 16px #FFF;
         border: solid 2px $line;
         background: #FFF;  
         h3 {
