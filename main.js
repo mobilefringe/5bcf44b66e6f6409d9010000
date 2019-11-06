@@ -93,14 +93,14 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                                 name: "nav.stores",
                                 href: "/stores"
                             },
-                            {
-                                name: "nav.dine",
-                                href: "/dine"
-                            },
-                            {
-                                name: "nav.play",
-                                href: "/play"
-                            },
+                            // {
+                            //     name: "nav.dine",
+                            //     href: "/dine"
+                            // },
+                            // {
+                            //     name: "nav.play",
+                            //     href: "/play"
+                            // },
                             {
                                 name: "nav.centre_map",
                                 href: "/map"
