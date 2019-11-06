@@ -18,29 +18,6 @@
         			</div>
         		</div>
         		<div class="site_container">
-        		    <div class="visible_phone">
-        		        <div class="hours_container home_hours margin_top_30">
-                            <h5 class="center caps" v-if="hour.is_open" v-for="hour in todaysHours">{{ property.name }} is open today:</h5>
-        		            <h5 class="center caps" v-else>{{ property.name }} is</h5>
-                            <h3 class="center caps" v-if="hour.is_open" v-for="hour in todaysHours">{{hour.open_time | moment("h a", timezone)}} - {{hour.close_time | moment("h a", timezone)}}</h3>
-                            <h3 class="center caps" v-else>Closed</h3>
-                        </div>
-        		        <div class="home_page_title_container">
-            		        <h5 class="home_page_subtitle center caps">Discover {{ property.name }}</h5>
-            		        <h3 class="home_page_title caps">Find Your Store</h3>
-            		    </div>
-            		    <div class="margin_30">
-                            <div class="map_search_container">
-                                <search-component v-model="storeSearch" :list="processedStores" :suggestion-attribute="suggestionAttribute" @select="onOptionSelect" :placeholder="$t('stores_page.find_your_store')">
-                                    <template slot="item" scope="option">
-                                        <article class="media"><p>{{ option.data.name }}</p></article>
-                                    </template>
-                                </search-component>
-                                <i id="store_search_icon" class="fa fa-search" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <mapplic-map ref="mapplic_ref" :height="556" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="allStores" :floorlist="floorList" tooltiplabel="View Store Details"></mapplic-map>
-        		    </div>
         		    <div class="home_page_title_container">
         		        <h5 class="home_page_subtitle center caps">Discover {{ property.name }}</h5>
         		        <h3 class="home_page_title caps">What's Happening</h3>
@@ -119,7 +96,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue!vue-slick", "js-cookie", "masonry", "vue-masonry-plugin", "vue!mapplic-map", "moment", "moment-timezone"], function(Vue, Vuex, slick, Cookies, masonry, VueMasonryPlugin, MapplicComponent, moment, tz) {
+    define(["Vue", "vuex", "vue!vue-slick", "masonry", "vue-masonry-plugin", "moment", "moment-timezone"], function(Vue, Vuex, slick, masonry, VueMasonryPlugin, moment, tz) {
         Vue.use(VueMasonryPlugin.default);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
@@ -127,8 +104,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    show_popup: false,
-                    popup: null,
                     slickOptions: {
                         arrows: false,
                         autoplay: true,
@@ -146,8 +121,6 @@
             },
             created () {
                 this.loadData().then(response => {
-                    // this.popup = this.$store.state.popups[0];
-                    
                     this.dataLoaded = true;
                 });
             },
@@ -247,35 +220,7 @@
                 //     features = _.sortBy(features, [function(o) { return o.mobile_order; }]);
                 //     return features;
                 // }
-                allStores() {
-                    var all_stores = this.processedStores;
-                    _.forEach(all_stores, function(value, key) {
-                        value.zoom = 2;
-                    });
-                    var initZoom = {};
-                    initZoom.svgmap_region = "init";
-                    initZoom.z_coordinate = 1;
-                    initZoom.x = 0.5;
-                    initZoom.y = 0.5;
-                    initZoom.zoom = 1;
-                    all_stores.push(initZoom)
-                    return all_stores
-                },
-                getSVGMap() {
-                    var mapURL = "https://www.mallmaverick.com" + this.property.svgmap_url.split("?")[0];
-                    return mapURL
-                },
-                floorList() {
-                    var floor_list = [];
-                    var floor_1 = {};
-                    floor_1.id = "first-floor";
-                    floor_1.title = "Level One";
-                    floor_1.map = this.getSVGMap;
-                    floor_1.z_index = 1;
-                    floor_1.show = true;
-                    floor_list.push(floor_1);
-                    return floor_list;
-                },
+                
                 todaysHours() {
                     var timezone = this.timezone
                     var regHours = this.getPropertyHours;
@@ -319,18 +264,16 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "popups")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "banners"), 
+                            this.$store.dispatch("getData", "feature_items"), 
+                            this.$store.dispatch("getData", "popups")
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                onOptionSelect(option) {
-                    this.$nextTick(function() {
-                        this.storeSearch = ""
-                    });
-                    this.$refs.mapplic_ref.showLocation(option.svgmap_region);
-                },
+                }
             }
         })
     })
