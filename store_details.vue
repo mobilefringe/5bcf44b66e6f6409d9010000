@@ -103,7 +103,7 @@
                     dataLoaded: false,
                     pageBanner: null,
                     currentStore: null,
-                    storeHours: {},
+                    storeHours: null,
                     storePromotions: {}
                 }
             },
