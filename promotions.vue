@@ -13,7 +13,11 @@
         		<div class="site_container page_content">
         		    <transition-group name="list" tag="div">
     					<div class="promo_container" v-if="promos.length > 0" v-for="promo in promos" :key="promo.id">
-    					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="promo.image_url"></div>
+    					    <div class="promo_img" v-if="promo.no_logo">
+    					        <div class="promo_no_logo">
+    					            <h2>{{ promo.store.name }}</h2>
+    					        </div>
+    					    </div>
     					    <div class="promo_img" v-else v-lazy:background-image="promo.promo_image2_url_abs"></div>
     					    <div class="promo_content">
     					        <p class="promo_title" v-if="promo.store">{{ promo.store.name }}</p>
@@ -102,8 +106,10 @@
                             if (value.store != null) {
                                 if (_.includes(value.store.store_front_url_abs, "missing")) {
                                     value.image_url = "";
+                                    value.no_logo = true;
                                 } else {
                                     value.image_url = value.store.store_front_url_abs;
+                                    value.no_logo = false;
                                 }
                             } else {
                                 value.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573071128095/cc_default_img.png"
