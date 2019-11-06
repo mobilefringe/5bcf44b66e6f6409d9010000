@@ -27,7 +27,7 @@
         					    </div>
         					</div>
         				</div>
-    					<div v-else>
+    					<div v-if="promos.length == 0">
                             <div class="row">
                                 <div class="col-md-12">
                                     <p>{{$t("promos_page.no_promo_message")}}</p>    
