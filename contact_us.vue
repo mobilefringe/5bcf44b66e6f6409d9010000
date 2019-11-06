@@ -23,7 +23,7 @@
 					        <div class="margin_40"></div>
 					        <span v-if="property.contact_phone || property.contact_fax">
 					            <h3>{{ $t("contact_page.phone_title") }}:</h3>
-					            <p>{{ $t("contact_page.phone1") }}: {{ property.contact_phone }}</p>
+					            <p v-if="property.contact_phone">{{ $t("contact_page.phone1") }}: {{ property.contact_phone }}</p>
 					            <p v-if="property.contact_fax">{{ $t("contact_page.phone2") }}: {{ property.contact_fax }}</p>
 					       </span>
 					        <div class="margin_40"></div>
