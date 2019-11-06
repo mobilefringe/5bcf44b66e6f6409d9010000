@@ -575,9 +575,6 @@ footer {
     }
     .social_icons .fa {
         color: $primary;
-        &:hover {
-            color: $accent !important;
-        }
     }
     .footer_terms {
         margin-top: 20px;
