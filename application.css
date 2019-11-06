@@ -574,7 +574,7 @@ footer {
         }
     }
     .social_icons .fa {
-        color: #fff;
+        color: #000;
         &:hover {
             color: $accent !important;
         }
@@ -582,14 +582,14 @@ footer {
     .footer_terms {
         margin-top: 20px;
         padding-top: 10px;
-        border-top: 1px solid #FFF;
+        border-top: 1px solid #000;
         text-align: center;
         p {
             margin: 0;
             font-size: 0.75rem;
         }
         a {
-            color: #FFF;
+            color: #000;
             cursor: pointer;
         }
     }
