@@ -115,21 +115,21 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                         name: "nav.events",
                         href: "/events",
                     },
-                    {
-                        name: "nav.programs",
-                        id: "menu2",
-                        href: "",
-                        sub_menu: [
-                            {
-                                name: "nav.gift_card",
-                                href: "/gift-cards"
-                            },
-                            {
-                                name: "nav.kids_club",
-                                href: "/kids-club"
-                            }
-                        ]
-                    },
+                    // {
+                    //     name: "nav.programs",
+                    //     id: "menu2",
+                    //     href: "",
+                    //     sub_menu: [
+                    //         {
+                    //             name: "nav.gift_card",
+                    //             href: "/gift-cards"
+                    //         },
+                    //         {
+                    //             name: "nav.kids_club",
+                    //             href: "/kids-club"
+                    //         }
+                    //     ]
+                    // },
                     {
                         name: "nav.about",
                         id: "menu3",
@@ -139,13 +139,17 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                                 name: "nav.contact",
                                 href: "/contact-us"
                             },
-                            {
-                                name: "nav.mall_info",
-                                href: "/mall-information"
-                            },
+                            // {
+                            //     name: "nav.mall_info",
+                            //     href: "/mall-information"
+                            // },
                             {
                                 name: "nav.hours",
                                 href: "/hours"
+                            },
+                            {
+                                name: "nav.leasing",
+                                href: "/pages/countryclub-leasing"
                             },
                             {
                                 name: "nav.jobs",
