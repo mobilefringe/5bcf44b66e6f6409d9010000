@@ -104,7 +104,6 @@
                         if (_.includes(this.currentEvent.promo_image2_url_abs, 'missing')) {
                             this.currentEvent.promo_image2_url_abs = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573071128095/cc_default_img.png";
                         }
-                           
                     } else {
                         this.$router.replace({ path: '/'});
                     }
