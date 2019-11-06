@@ -27,7 +27,6 @@
     						    </router-link>
     					    </div>
     					</div>
-    				
     				</transition-group>
         			<div class="row" v-if="events.length > 0">
                         <div class="col-md-12">
