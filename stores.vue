@@ -81,17 +81,17 @@
                     dataLoaded: false,
                     pageBanner : null,
                     search_result : null,
-                    storeFilter: 6530
+                    // storeFilter: 6530
                 }
             },
             created (){
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Directory Banner');
-                    if(temp_repo) {
+                    if (temp_repo) {
                         try {
                             this.pageBanner = temp_repo.images[0];
                         } catch(e) {
-                            
+                            this.pageBanner = { "image_url": "" }
                         }
                     } else {
                         this.pageBanner = { "image_url": "" }
