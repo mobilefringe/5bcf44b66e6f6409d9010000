@@ -25,23 +25,23 @@
     						    </router-link>
     					    </div>
     					</div>
-                        <div class="row" v-if="promos.length == 0">
+    				</transition-group>
+        			<div class="row" v-if="promos.length > 0">
+                        <div class="col-md-12">
+                            <button class="animated_btn promo_load_more" v-if="!noMorePromos" @click="handleButton">Load More</button>
+                            <p v-if="noPromos">{{$t("promos_page.no_more_promo_message")}}</p>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div class="row">
                             <div class="col-md-12">
-                            hello
                                 <p>{{$t("promos_page.no_promo_message")}}</p>    
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button class="animated_btn promo_load_more" v-if="promos.length > 0 && !noMorePromos" @click="handleButton">Load More</button>
-                                <p v-if="noPromos">{{$t("promos_page.no_more_promo_message")}}</p>
-                            </div>
-                        </div>
-    				</transition-group>
-        			
+                    </div>
         		</div>
-	        </div>
-	    </transition>
+        	</div>
+        </transition>
 	</div>
 </template>
 
