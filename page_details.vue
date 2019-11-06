@@ -12,15 +12,6 @@
         		</div>
                 <div class="site_container">
     				<div class="pages_content" v-if="currentPage">
-    				    <div class="row" v-if="isDefault">
-    				        <div class="col-md-12">
-            				    <h3 v-if="locale=='en-ca'">{{ currentPage.title }}</h3>
-            				    <h3 v-else>{{ currentPage.title_2 }}</h3>
-            				</div>
-        					<!--<div class="page_body" v-if="locale=='en-ca'" v-html="currentPage.body"></div>-->
-             <!--               <div class="page_body" v-else v-html="currentPage.body_2"></div>-->
-                        </div>
-                        
                         <div class="row">
             			    <div :class="{'col-md-6 col-lg-5': currentPage.image_url, 'col-md-12': !currentPage.image_url}">
             			        <div v-if="currentPage">
