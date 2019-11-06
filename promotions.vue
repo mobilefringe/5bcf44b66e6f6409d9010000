@@ -101,7 +101,7 @@
                             value.description_short_2 = _.truncate(value.description_2, { 'length': 60, 'separator': ' ' });
                             if (value.store != null) {
                                 if (_.includes(value.store.store_front_url_abs, "missing")) {
-                                    
+                                    value.image_url = "";
                                 } else {
                                     value.image_url = value.store.store_front_url_abs;
                                 }
