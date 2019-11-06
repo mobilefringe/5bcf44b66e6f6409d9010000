@@ -135,6 +135,7 @@
                     'findRepoByName'
                 ]),
                 getPropertyAddress() {
+                    console.log("address", this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.province_state + ' ' + this.property.country)
                     return this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.province_state + ' ' + this.property.country;
                 }
             },
