@@ -12,10 +12,26 @@
         		</div>
                 <div class="site_container">
     				<div class="pages_content" v-if="currentPage">
-    				    <h3 v-if="locale=='en-ca'">{{ currentPage.title }}</h3>
-    				    <h3 v-else>{{ currentPage.title_2 }}</h3>
-    					<div class="page_body" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
-                        <div class="page_body" v-else v-html="currentPage.body_2"></div>
+    				    <div class="row" v-if="isDefault">
+    				        <div class="col-md-12">
+            				    <h3 v-if="locale=='en-ca'">{{ currentPage.title }}</h3>
+            				    <h3 v-else>{{ currentPage.title_2 }}</h3>
+            				</div>
+        					<!--<div class="page_body" v-if="locale=='en-ca'" v-html="currentPage.body"></div>-->
+             <!--               <div class="page_body" v-else v-html="currentPage.body_2"></div>-->
+                        </div>
+                        
+                        <div class="row">
+            			    <div :class="{'col-md-6 col-lg-5': currentPage.image_url, 'col-md-12': !currentPage.image_url}">
+            			        <div v-if="currentPage">
+            			            <div v-if="locale=='en-ca'" v-html="currentPage.body"></div>
+            			            <div v-else v-html="currentPage.body_2"></div>
+            			        </div>
+            			    </div>
+            			   <div class="col-md-6 col-lg-7" v-if="currentPage.image_url">
+            			       <img class="max_width" :src="currentPage.image_url" alt="" />
+            			   </div>
+            		    </div>
     				</div>
     			</div>
 			</div>
