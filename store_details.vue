@@ -175,12 +175,14 @@
                         } else {
                             this.currentStore.no_logo = false
                         }
+                        
                         // STORE WEBSITE 
                         if (this.currentStore.website) {
                             this.currentStore.website = "http://" + this.currentStore.website
                         }
+                        
                         // STORE HOURS
-                        var storeHours = [];
+                        var store_hours = [];
                         _.forEach(this.currentStore.store_hours, function (value, key) {
                             hours = vm.findHourById(value)
                             today = moment().day();
@@ -189,9 +191,12 @@
                             } else {
                                 hours.todays_hours = false;
                             }
-                            storeHours.push(hours);
+                            store_hours.push(hours);
                         });
-                        this.storeHours = _.sortBy(storeHours, function(o) { return o.day_of_week });
+                        if (store_hours.length > 0) {
+                            this.storeHours = _.sortBy(store_hours, function(o) { return o.day_of_week });
+                        }
+                        
                         // PROMOTIONS
                         var temp_promo = [];
                         var promos = this.currentStore.promotions;
