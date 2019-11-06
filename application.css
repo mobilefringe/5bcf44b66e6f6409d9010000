@@ -574,7 +574,7 @@ footer {
         }
     }
     .social_icons .fa {
-        color: #000;
+        color: $primary;
         &:hover {
             color: $accent !important;
         }
