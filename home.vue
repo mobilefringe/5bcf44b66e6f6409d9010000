@@ -93,25 +93,25 @@
                     <!--        </div>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    <div class="home_page_title_container">
-        		        <h5 class="home_page_subtitle center caps">Programs</h5>
-        		        <h3 class="home_page_title second caps">Kids Club & Gift Cards</h3>
-        		    </div>
-        		    <div class="row">
-        		        <div v-for="feature in programs" class="col-sm-6">
-        		            <div class="feature_item_container programs" :class="feature.program_class">
-                    			<div class="feature_item_info">
-                    				<div class="feature_item_content">
-                    					<p>{{ feature.name }}</p>
-                    					<h3>{{ feature.description }}</h3>
-                    					<a :href="feature.url" :aria-label="feature.name">
-                        					<div class="feature_item_more animated_btn">View Details</div>
-                        				</a>
-                    				</div>
-                    			</div>
-                    	    </div>
-        		        </div>
-        		    </div>
+              <!--      <div class="home_page_title_container">-->
+        		    <!--    <h5 class="home_page_subtitle center caps">Programs</h5>-->
+        		    <!--    <h3 class="home_page_title second caps">Kids Club & Gift Cards</h3>-->
+        		    <!--</div>-->
+        		    <!--<div class="row">-->
+        		    <!--    <div v-for="feature in programs" class="col-sm-6">-->
+        		    <!--        <div class="feature_item_container programs" :class="feature.program_class">-->
+              <!--      			<div class="feature_item_info">-->
+              <!--      				<div class="feature_item_content">-->
+              <!--      					<p>{{ feature.name }}</p>-->
+              <!--      					<h3>{{ feature.description }}</h3>-->
+              <!--      					<a :href="feature.url" :aria-label="feature.name">-->
+              <!--          					<div class="feature_item_more animated_btn">View Details</div>-->
+              <!--          				</a>-->
+              <!--      				</div>-->
+              <!--      			</div>-->
+              <!--      	    </div>-->
+        		    <!--    </div>-->
+        		    <!--</div>-->
         		</div>
         	</div>
         </transition>    		
