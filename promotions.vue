@@ -18,7 +18,7 @@
     					            <h2>{{ promo.store.name }}</h2>
     					        </div>
     					    </div>
-    					    <div class="promo_img" v-else v-lazy:background-image="promo.promo_image2_url_abs"></div>
+    					    <div class="promo_img" v-else v-lazy:background-image="promo.image_url"></div>
     					    <div class="promo_content">
     					        <p class="promo_title" v-if="promo.store">{{ promo.store.name }}</p>
     					        <p class="promo_title" v-else>{{ property.name }}</p>
