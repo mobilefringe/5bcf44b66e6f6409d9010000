@@ -112,7 +112,7 @@
                                     value.no_logo = false;
                                 }
                             } else {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573071128095/cc_default_img.png"
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png"
                             }
                             // if (_.includes(value.image_url, 'missing')) {
                             //     value.image_url = "https://placehold.it/1600x800/757575";
