@@ -553,7 +553,7 @@ footer {
                 display: inline-block;
                 font-size: 0.875rem;
                 a {
-                    color: #FFF;
+                    color: #000;
                 }
                 a:after {
                     content: "";
