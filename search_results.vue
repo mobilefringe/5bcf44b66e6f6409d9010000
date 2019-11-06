@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                                 <div v-else class="col-sm-2 store_details_image center-block">
-                                    <img class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5bbfac0c6e6f6411b3040000/image/png/1539190868000/mm_default.png"/>    
+                                    <img class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png"/>    
                                 </div>
                                 <div class="col-sm-10 search_result_content">
                                     <h4 class="bold">{{result.name}}</h4>
