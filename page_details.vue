@@ -39,6 +39,7 @@
                 this.updateCurrentPage(this.id);
                 this.loadData().then(response => {
                     var temp_repo = ""
+                    console.log("this.$route.path", this.$route.path)
                     if (_.includes(this.$route.path, "-leasing")) {
                         temp_repo = this.findRepoByName('Mall Info Banner');
                     } else {
