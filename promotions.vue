@@ -37,7 +37,7 @@
     				</transition-group>
         			<div class="row">
                         <div class="col-md-12">
-                            <button class="animated_btn promo_load_more" v-if="!noMorePromos" @click="handleButton">Load More</button>
+                            <button class="animated_btn promo_load_more" v-if="promos.length > 0 && !noMorePromos" @click="handleButton">Load More</button>
                             <p v-if="noPromos">{{$t("promos_page.no_more_promo_message")}}</p>
                         </div>
                     </div>
@@ -118,7 +118,10 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch("getData", "promotions")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "repos"), 
+                            this.$store.dispatch("getData", "promotions")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
