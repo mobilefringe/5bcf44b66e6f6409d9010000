@@ -69,7 +69,7 @@
                         try {
                             this.pageBanner = temp_repo.images[0];
                         } catch(e) {
-                            
+                            this.pageBanner = { "image_url": "" }
                         }
                     } else {
                         this.pageBanner = { "image_url": "" }
@@ -125,7 +125,7 @@
                     }
                 },
                 handleButton: function () {
-                    if(!this.morePromosFetched){
+                    if (!this.morePromosFetched) {
                         this.morePromos = this.promotions;
                         this.promos = this.morePromos.splice(0, 3);
                         this.morePromosFetched = true;
@@ -137,7 +137,7 @@
                             vm.promos.push(value);
                         });
                     }
-                    if(this.promotions.length === 0){
+                    if (this.promotions.length === 0) {
                         this.noMorePromos = true
                         this.noPromos = true
                     } else {
