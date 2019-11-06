@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" v-if="holidayHours.length > 0">
                         <div class="col-sm-12">
                             <h4 class="margin_30 bold">Holiday Hours</h4>
                         </div>
