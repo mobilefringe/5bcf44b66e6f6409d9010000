@@ -524,7 +524,7 @@ ul.options-list li.highlighted {
 /* FOOTER */
 footer {
     padding: 20px 0 10px 0;
-    background: #000;
+    background: #777;
     color: #FFF;
     .footer_logo {
         display: -webkit-box;
