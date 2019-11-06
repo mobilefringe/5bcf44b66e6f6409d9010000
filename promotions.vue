@@ -30,6 +30,7 @@
     					<div>
                             <div class="row">
                                 <div class="col-md-12">
+                                hello
                                     <p>{{$t("promos_page.no_promo_message")}}</p>    
                                 </div>
                             </div>
