@@ -18,6 +18,14 @@
         			</div>
         		</div>
         		<div class="site_container">
+        		    <div class="visible_phone">
+        		        <div class="hours_container home_hours margin_top_30">
+                            <h5 class="center caps" v-if="hour.is_open" v-for="hour in todaysHours">{{ property.name }} is open today:</h5>
+        		            <h5 class="center caps" v-else>{{ property.name }} is</h5>
+                            <h3 class="center caps" v-if="hour.is_open" v-for="hour in todaysHours">{{hour.open_time | moment("h a", timezone)}} - {{hour.close_time | moment("h a", timezone)}}</h3>
+                            <h3 class="center caps" v-else>Closed</h3>
+                        </div>
+        		    </div>
         		    <div class="home_page_title_container">
         		        <h5 class="home_page_subtitle center caps">Discover {{ property.name }}</h5>
         		        <h3 class="home_page_title caps">What's Happening</h3>
@@ -70,25 +78,25 @@
                     <!--        </div>-->
                     <!--    </div>-->
                     <!--</div>-->
-              <!--      <div class="home_page_title_container">-->
-        		    <!--    <h5 class="home_page_subtitle center caps">Programs</h5>-->
-        		    <!--    <h3 class="home_page_title second caps">Kids Club & Gift Cards</h3>-->
-        		    <!--</div>-->
-        		    <!--<div class="row">-->
-        		    <!--    <div v-for="feature in programs" class="col-sm-6">-->
-        		    <!--        <div class="feature_item_container programs" :class="feature.program_class">-->
-              <!--      			<div class="feature_item_info">-->
-              <!--      				<div class="feature_item_content">-->
-              <!--      					<p>{{ feature.name }}</p>-->
-              <!--      					<h3>{{ feature.description }}</h3>-->
-              <!--      					<a :href="feature.url" :aria-label="feature.name">-->
-              <!--          					<div class="feature_item_more animated_btn">View Details</div>-->
-              <!--          				</a>-->
-              <!--      				</div>-->
-              <!--      			</div>-->
-              <!--      	    </div>-->
-        		    <!--    </div>-->
-        		    <!--</div>-->
+                    <div class="home_page_title_container">
+        		        <h5 class="home_page_subtitle center caps">Programs</h5>
+        		        <h3 class="home_page_title second caps">Kids Club & Gift Cards</h3>
+        		    </div>
+        		    <div class="row">
+        		        <div v-for="feature in programs" class="col-sm-6">
+        		            <div class="feature_item_container programs" :class="feature.program_class">
+                    			<div class="feature_item_info">
+                    				<div class="feature_item_content">
+                    					<p>{{ feature.name }}</p>
+                    					<h3>{{ feature.description }}</h3>
+                    					<a :href="feature.url" :aria-label="feature.name">
+                        					<div class="feature_item_more animated_btn">View Details</div>
+                        				</a>
+                    				</div>
+                    			</div>
+                    	    </div>
+        		        </div>
+        		    </div>
         		</div>
         	</div>
         </transition>    		
@@ -96,7 +104,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue!vue-slick", "masonry", "vue-masonry-plugin", "moment", "moment-timezone"], function(Vue, Vuex, slick, masonry, VueMasonryPlugin, moment, tz) {
+    define(["Vue", "vuex", "vue!vue-slick", "js-cookie", "masonry", "vue-masonry-plugin", "vue!mapplic-map", "moment", "moment-timezone"], function(Vue, Vuex, slick, Cookies, masonry, VueMasonryPlugin, MapplicComponent, moment, tz) {
         Vue.use(VueMasonryPlugin.default);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
@@ -104,6 +112,8 @@
             data: function() {
                 return {
                     dataLoaded: false,
+                    show_popup: false,
+                    popup: null,
                     slickOptions: {
                         arrows: false,
                         autoplay: true,
@@ -121,6 +131,8 @@
             },
             created () {
                 this.loadData().then(response => {
+                    // this.popup = this.$store.state.popups[0];
+                    
                     this.dataLoaded = true;
                 });
             },
@@ -220,7 +232,35 @@
                 //     features = _.sortBy(features, [function(o) { return o.mobile_order; }]);
                 //     return features;
                 // }
-                
+                allStores() {
+                    var all_stores = this.processedStores;
+                    _.forEach(all_stores, function(value, key) {
+                        value.zoom = 2;
+                    });
+                    var initZoom = {};
+                    initZoom.svgmap_region = "init";
+                    initZoom.z_coordinate = 1;
+                    initZoom.x = 0.5;
+                    initZoom.y = 0.5;
+                    initZoom.zoom = 1;
+                    all_stores.push(initZoom)
+                    return all_stores
+                },
+                getSVGMap() {
+                    var mapURL = "https://www.mallmaverick.com" + this.property.svgmap_url.split("?")[0];
+                    return mapURL
+                },
+                floorList() {
+                    var floor_list = [];
+                    var floor_1 = {};
+                    floor_1.id = "first-floor";
+                    floor_1.title = "Level One";
+                    floor_1.map = this.getSVGMap;
+                    floor_1.z_index = 1;
+                    floor_1.show = true;
+                    floor_list.push(floor_1);
+                    return floor_list;
+                },
                 todaysHours() {
                     var timezone = this.timezone
                     var regHours = this.getPropertyHours;
@@ -264,16 +304,18 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([
-                            this.$store.dispatch("getData", "banners"), 
-                            this.$store.dispatch("getData", "feature_items"), 
-                            this.$store.dispatch("getData", "popups")
-                        ]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "popups")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                }
+                },
+                onOptionSelect(option) {
+                    this.$nextTick(function() {
+                        this.storeSearch = ""
+                    });
+                    this.$refs.mapplic_ref.showLocation(option.svgmap_region);
+                },
             }
         })
     })
