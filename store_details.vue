@@ -51,7 +51,7 @@
             			</div>
             		</div>
             		<div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-5" v-if="storeHours">
             				<div class="details_store_hours">
             				    <h4 class="details_store_title caps">{{ $t("stores_page.store_hours") }}</h4> 
             				    <ul v-if="storeHours" class="details_store_hours_list">
@@ -66,7 +66,7 @@
                                 </ul>
             				</div>
             			</div>
-            			<div class="col-md-7">
+            			<div :class="{ 'col-md-7': storeHours, 'col-md-12': !storeHours }">
             				<div class="details_store_desc">
             				    <h4 class="details_store_title caps">{{ currentStore.name }}</h4>
             				    <div v-html="currentStore.description"></div>
