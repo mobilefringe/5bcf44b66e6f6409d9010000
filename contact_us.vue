@@ -111,7 +111,7 @@
                         try {
                             this.pageBanner = temp_repo.images[0];
                         } catch(e) {
-                            
+                            this.pageBanner = { "image_url": "" }
                         }
                     } else {
                         this.pageBanner = { "image_url": "" }
@@ -135,7 +135,6 @@
                     'findRepoByName'
                 ]),
                 getPropertyAddress() {
-                    console.log("address", this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.province_state + ' ' + this.property.country)
                     return this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.province_state + ' ' + this.property.country;
                 }
             },
