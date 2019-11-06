@@ -78,25 +78,26 @@
                     <!--        </div>-->
                     <!--    </div>-->
                     <!--</div>-->
-                    <div class="home_page_title_container">
-        		        <h5 class="home_page_subtitle center caps">Programs</h5>
-        		        <h3 class="home_page_title second caps">Kids Club & Gift Cards</h3>
-        		    </div>
-        		    <div class="row">
-        		        <div v-for="feature in programs" class="col-sm-6">
-        		            <div class="feature_item_container programs" :class="feature.program_class">
-                    			<div class="feature_item_info">
-                    				<div class="feature_item_content">
-                    					<p>{{ feature.name }}</p>
-                    					<h3>{{ feature.description }}</h3>
-                    					<a :href="feature.url" :aria-label="feature.name">
-                        					<div class="feature_item_more animated_btn">View Details</div>
-                        				</a>
-                    				</div>
-                    			</div>
-                    	    </div>
-        		        </div>
-        		    </div>
+                    <!-- Additional Feature Items -->
+              <!--      <div class="home_page_title_container">-->
+        		    <!--    <h5 class="home_page_subtitle center caps">Programs</h5>-->
+        		    <!--    <h3 class="home_page_title second caps">Kids Club & Gift Cards</h3>-->
+        		    <!--</div>-->
+        		    <!--<div class="row">-->
+        		    <!--    <div v-for="feature in programs" class="col-sm-6">-->
+        		    <!--        <div class="feature_item_container programs" :class="feature.program_class">-->
+              <!--      			<div class="feature_item_info">-->
+              <!--      				<div class="feature_item_content">-->
+              <!--      					<p>{{ feature.name }}</p>-->
+              <!--      					<h3>{{ feature.description }}</h3>-->
+              <!--      					<a :href="feature.url" :aria-label="feature.name">-->
+              <!--          					<div class="feature_item_more animated_btn">View Details</div>-->
+              <!--          				</a>-->
+              <!--      				</div>-->
+              <!--      			</div>-->
+              <!--      	    </div>-->
+        		    <!--    </div>-->
+        		    <!--</div>-->
         		</div>
         	</div>
         </transition>    		
@@ -104,7 +105,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue!vue-slick", "js-cookie", "masonry", "vue-masonry-plugin", "vue!mapplic-map", "moment", "moment-timezone"], function(Vue, Vuex, slick, Cookies, masonry, VueMasonryPlugin, MapplicComponent, moment, tz) {
+    define(["Vue", "vuex", "vue!vue-slick", "masonry", "vue-masonry-plugin", "moment", "moment-timezone"], function(Vue, Vuex, slick, masonry, VueMasonryPlugin, moment, tz) {
         Vue.use(VueMasonryPlugin.default);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
@@ -112,8 +113,6 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    show_popup: false,
-                    popup: null,
                     slickOptions: {
                         arrows: false,
                         autoplay: true,
@@ -131,25 +130,23 @@
             },
             created () {
                 this.loadData().then(response => {
-                    // this.popup = this.$store.state.popups[0];
-                    
                     this.dataLoaded = true;
                 });
             },
-            watch : {
-                dataLoaded () {
-                    var viewed = Cookies.get('popup_viewed');
-                    if(this.popup !== null && viewed !== "true") {
-                        Cookies.set('popup_viewed', "true");
-                        viewed = Cookies.get('popup_viewed');
-                        this.show_popup = true;
-                        this.popup.image_url = "//mallmaverick.cdn.speedyrails.net" + this.popup.photo_url;
-                        document.getElementById('popup_backdrop').style.display = "block";
-                    } else {
-                        document.getElementById('popup_backdrop').style.display = "none";
-                    }
-                }
-            },
+            // watch : {
+            //     dataLoaded () {
+            //         var viewed = Cookies.get('popup_viewed');
+            //         if(this.popup !== null && viewed !== "true") {
+            //             Cookies.set('popup_viewed', "true");
+            //             viewed = Cookies.get('popup_viewed');
+            //             this.show_popup = true;
+            //             this.popup.image_url = "//mallmaverick.cdn.speedyrails.net" + this.popup.photo_url;
+            //             document.getElementById('popup_backdrop').style.display = "block";
+            //         } else {
+            //             document.getElementById('popup_backdrop').style.display = "none";
+            //         }
+            //     }
+            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -159,7 +156,7 @@
                     'processedStores'
                 ]),
                 banners () {
-                    var banners = [];//this.$store.state.banners;
+                    var banners = [];
                     _.forEach(this.$store.state.banners, function(value, key) {
                         var today = new Date();
                         var start = new Date (value.start_date);
@@ -232,35 +229,6 @@
                 //     features = _.sortBy(features, [function(o) { return o.mobile_order; }]);
                 //     return features;
                 // }
-                allStores() {
-                    var all_stores = this.processedStores;
-                    _.forEach(all_stores, function(value, key) {
-                        value.zoom = 2;
-                    });
-                    var initZoom = {};
-                    initZoom.svgmap_region = "init";
-                    initZoom.z_coordinate = 1;
-                    initZoom.x = 0.5;
-                    initZoom.y = 0.5;
-                    initZoom.zoom = 1;
-                    all_stores.push(initZoom)
-                    return all_stores
-                },
-                getSVGMap() {
-                    var mapURL = "https://www.mallmaverick.com" + this.property.svgmap_url.split("?")[0];
-                    return mapURL
-                },
-                floorList() {
-                    var floor_list = [];
-                    var floor_1 = {};
-                    floor_1.id = "first-floor";
-                    floor_1.title = "Level One";
-                    floor_1.map = this.getSVGMap;
-                    floor_1.z_index = 1;
-                    floor_1.show = true;
-                    floor_list.push(floor_1);
-                    return floor_list;
-                },
                 todaysHours() {
                     var timezone = this.timezone
                     var regHours = this.getPropertyHours;
@@ -299,23 +267,21 @@
                         });
                         return hours;
                     }
-                },
+                }
             },
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "popups")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "banners"), 
+                            this.$store.dispatch("getData", "feature_items"), 
+                            this.$store.dispatch("getData", "popups")
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                onOptionSelect(option) {
-                    this.$nextTick(function() {
-                        this.storeSearch = ""
-                    });
-                    this.$refs.mapplic_ref.showLocation(option.svgmap_region);
-                },
+                }
             }
         })
     })
