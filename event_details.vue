@@ -98,11 +98,11 @@
                         this.currentEvent.name_short = _.truncate(this.currentEvent.name, { 'length': 21, 'separator': ' ' });
                         this.currentEvent.name_short_2 = _.truncate(this.currentEvent.name_2, { 'length': 21, 'separator': ' ' });
             
-                        if(_.includes(this.currentEvent.image_url, 'missing')) {
-                            this.currentEvent.image_url = "https://via.placeholder.com/1560x800/757575";
+                        if (_.includes(this.currentEvent.image_url, 'missing')) {
+                            this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573071128095/cc_default_img.png";
                         }
-                        if(_.includes(this.currentEvent.promo_image2_url_abs, 'missing')) {
-                            this.currentEvent.promo_image2_url_abs = "https://via.placeholder.com/1560x800/757575";
+                        if (_.includes(this.currentEvent.promo_image2_url_abs, 'missing')) {
+                            this.currentEvent.promo_image2_url_abs = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573071128095/cc_default_img.png";
                         }
                            
                     } else {
