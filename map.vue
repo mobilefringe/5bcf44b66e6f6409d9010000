@@ -117,6 +117,7 @@
                     this.$refs.mapplic_ref.showLocation(option.svgmap_region);
                 },
                 dropPin(store) {
+                    console.log("store", store)
                     this.$refs.mapplic_ref.showLocation(store.svgmap_region);
                 }
             }
