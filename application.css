@@ -1593,7 +1593,7 @@ footer {
     }
     
     .promo_img_details {
-        padding-top: 55.30973%;
+        @include responsive-ratio(2,1);
         background-position: 0;
         background-repeat: no-repeat;
         background-size: contain;
