@@ -1573,7 +1573,15 @@ footer {
     }
     
     .promo_img_details {
-    
+        padding-top: 55.30973%;
+        background-position: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
         .blur-overlay {
             width: 100%;
             max-width: 100%;
