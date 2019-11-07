@@ -1326,7 +1326,7 @@ footer {
         transition: all 0.3s ease;
         &:hover {
             cursor: pointer;
-            background: $accent;
+            background: $primary;
             color: #FFF;
         }
         p {
@@ -2083,10 +2083,6 @@ footer {
                 font-size: 1.125rem;
                 line-height: 1.875rem;
             }
-            // h4, p {
-            //     margin: 0;
-            //     color: #FFF;
-            // }
         }
     }
 }
