@@ -1648,10 +1648,10 @@ footer {
         background-size: cover;
     }
     img {
-        width: auto;
+        // width: auto;
         max-width: 100%;
-        max-height: 100%;
-        max-height: 194px;
+        // max-height: 100%;
+        // max-height: 194px;
         position: absolute;
         top: 50%;
         left: 50%;
