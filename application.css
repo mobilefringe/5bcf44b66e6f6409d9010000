@@ -2108,6 +2108,13 @@ footer {
         -moz-osx-font-smoothing: grayscale;
         line-height: normal;
         letter-spacing: 0.6px;
+        .store_text {
+            h2 {
+                margin: 0;
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+            }
+        }
     }
 }
 
