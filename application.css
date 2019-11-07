@@ -1625,10 +1625,6 @@ footer {
     }
 }
 .promo_img_details {
-    // @include responsive-ratio(2,1);
-    // background-position: 0;
-    // background-repeat: no-repeat;
-    // background-size: contain;
     width: calc(69.5%);
     height: 411px;
     position: relative;
@@ -1648,10 +1644,7 @@ footer {
         background-size: cover;
     }
     img {
-        // width: auto;
         max-width: 100%;
-        // max-height: 100%;
-        // max-height: 194px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -2078,10 +2071,15 @@ footer {
             letter-spacing: 0.6px;
             text-transform: uppercase;
             text-align: center;
-            h4, p {
+            h2 {
                 margin: 0;
-                color: #FFF;
+                font-size: 1.125rem;
+                line-height: 1.875rem;
             }
+            // h4, p {
+            //     margin: 0;
+            //     color: #FFF;
+            // }
         }
     }
 }
