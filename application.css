@@ -1641,8 +1641,8 @@ footer {
         min-height: 411px;
         position: absolute;
         top: 0;
-        -webkit-filter: blur(3px);
-        filter: blur(3px);
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
