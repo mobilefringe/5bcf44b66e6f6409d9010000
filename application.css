@@ -1486,11 +1486,18 @@ footer {
     .promo_img {
         width: calc(69.5%);
         height: 400px;
+        position: relative;
         display: inline-block;
         border: 1px solid $line;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
+    }
+    .promo_no_logo {
+        position: abasolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .promo_content {
         margin-right: 22px;
