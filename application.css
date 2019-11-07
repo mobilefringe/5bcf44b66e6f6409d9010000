@@ -1592,7 +1592,39 @@ footer {
         height: 411px;
     }
     
-    .promo_img_details {
+    
+} 
+.no_promos {
+    padding: 40px 0;
+}
+
+/* *** PROMOTION DETAILS *** */
+.promo_details_desc {
+    margin: 57px 16px 70px 16px;
+    padding: 48px 34px;
+    width: calc(100% - 32px);
+    min-height: 300px;
+    display: inline-block;
+    position: relative;
+    outline: solid 16px #FFF;
+    border: solid 3px #D6D6D6;
+    background: #FFF;
+    .details_store_website {
+        padding: 13px;
+        min-width: 175px;
+        position: absolute;
+        bottom: 33px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid #000;
+        font-family: 'didot-bold';
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.promo_img_details {
         @include responsive-ratio(2,1);
         background-position: 0;
         background-repeat: no-repeat;
@@ -1628,37 +1660,7 @@ footer {
             background: transparent;
         }
     }
-} 
-.no_promos {
-    padding: 40px 0;
-}
-
-/* *** PROMOTION DETAILS *** */
-.promo_details_desc {
-    margin: 57px 16px 70px 16px;
-    padding: 48px 34px;
-    width: calc(100% - 32px);
-    min-height: 300px;
-    display: inline-block;
-    position: relative;
-    outline: solid 16px #FFF;
-    border: solid 3px #D6D6D6;
-    background: #FFF;
-    .details_store_website {
-        padding: 13px;
-        min-width: 175px;
-        position: absolute;
-        bottom: 33px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 1px solid #000;
-        font-family: 'didot-bold';
-        font-size: 0.75rem;
-        line-height: 1.25rem;
-        text-transform: uppercase;
-        text-align: center;
-    }
-}
+    
 /* *** JOBS *** */
 .job_container {
     margin-bottom: 30px;
