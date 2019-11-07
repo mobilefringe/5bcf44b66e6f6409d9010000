@@ -12,8 +12,11 @@
         		</div>
         		<div class="site_container page_content">
         		    <div class="promo_container promo_details_container" v-if="currentPromo">
-					    <div class="promo_img" v-if="locale=='en-ca'" v-lazy:background-image="currentPromo.image_url"></div>
-					    <div class="promo_img" v-else v-lazy:background-image="currentPromo.promo_image2_url_abs"></div>
+					    <div class="promo_img_details">
+					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.image_url + ')' }"></div>
+					        <img :src="currentPromo.image_url" alt="" />
+					    </div>
+					    
 					    <div class="promo_content">
 					        <p class="promo_title" v-if="currentPromo.store">{{ currentPromo.store.name }}</p>
 					        <p class="promo_title" v-else>{{ property.name }}</p>
