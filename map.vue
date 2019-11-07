@@ -29,13 +29,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-9"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-9 col-md-push-3">
+                        <div class="col-md-9">
                             <mapplic-map ref="mapplic_ref" :height="556" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="allStores" :floorlist="floorList" tooltiplabel="View Store Details"></mapplic-map>
                         </div>
-                        <div class="margin-30 visible-mobile"></div>
+                    </div>
+                    <!--<div class="row">-->
+                    <!--    <div class="col-md-9 col-md-push-3">-->
+                            
+                    <!--    </div>-->
+                    <!--    <div class="margin-30 visible-mobile"></div>-->
                         <!--<div class="hidden_phone col-md-3 col-md-pull-9">-->
                         <!--    <div class="store_list_container hidden-mobile">-->
                         <!--        <div class="store_name" v-for="store in allStores">-->
@@ -43,7 +45,7 @@
                         <!--        </div>-->
                         <!--    </div>-->
                         <!--</div>-->
-                    </div>
+                    <!--</div>-->
                 </div>
             </div>
         </transition>
