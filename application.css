@@ -42,6 +42,30 @@ $link: #000;
 
 $font_family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 
+@mixin background($background-position: center center,
+$background-repeat: no-repeat,
+$background-size: cover) {
+	background-position: $background-position;
+	background-repeat: $background-repeat;
+	background-size: $background-size;
+}
+
+@mixin responsive-ratio($x,
+$y,
+$pseudo: false) {
+	$padding: unquote( ( $y / $x) * 100 + '%');
+	@if $pseudo {
+		&:before {
+			@include pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding;
+		}
+	}
+	@else {
+		padding-top: $padding;
+	}
+}
+
 [v-cloak] {
     display: none!important;
 }
