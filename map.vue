@@ -21,6 +21,7 @@
                                 </search-component>
                                 <i id="store_search_icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
+                            <div class="margin-30 visible-mobile"></div>-->
                             <div class="hidden_phone">
                                 <div class="store_list_container hidden-mobile">
                                     <div class="store_name" v-for="store in allStores">
@@ -37,7 +38,7 @@
                     <!--    <div class="col-md-9 col-md-push-3">-->
                             
                     <!--    </div>-->
-                    <!--    <div class="margin-30 visible-mobile"></div>-->
+                    <!--    
                         <!--<div class="hidden_phone col-md-3 col-md-pull-9">-->
                         <!--    <div class="store_list_container hidden-mobile">-->
                         <!--        <div class="store_name" v-for="store in allStores">-->
