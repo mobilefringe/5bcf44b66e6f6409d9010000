@@ -112,7 +112,7 @@
                                 console.log("store", this.currentPromo.is_store)
                                 if (this.currentPromo.is_store) {
                                     console.log("promo", this.currentPromo)
-                                    this.currentPromo.img_url = this.currentPromo.store_front_url_abs;
+                                    this.currentPromo.img_url = this.currentPromo.store.store_front_url_abs;
                                 } else {
                                     this.currentPromo.img_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
                                 }
