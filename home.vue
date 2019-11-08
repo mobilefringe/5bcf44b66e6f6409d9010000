@@ -183,7 +183,7 @@
                     return _.orderBy(banners, ['position'], ['asc']);
                 },
                 feature_items () {
-                    var features = _.slice(this.$store.state.feature_items, 0, 6);
+                    var features = _.slice(this.$store.state.feature_items, 0, 4);
                     _.forEach(features, function(value, key) {
                         if ( _.includes([1], key) ) {
                             value.masonry_class = "grid-item--width2";
