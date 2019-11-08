@@ -262,7 +262,7 @@ ul.options-list li {
     }
 }
 ul.options-list li.highlighted {
-    background: $transparent !important;
+    background: $primary !important;
     color: #FFF;
 }
 
