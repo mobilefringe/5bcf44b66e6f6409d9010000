@@ -1691,7 +1691,7 @@ footer {
             a:hover {
                 text-decoration: none;
             }
-            .job_position {
+            .job_position.bold {
                 font-size: 1.5rem;
             }
             .job_learn_more {
