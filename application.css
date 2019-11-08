@@ -1698,7 +1698,7 @@ footer {
                 margin: 30px auto 0 auto;
                 padding: 5px 0;
                 max-width: 200px;
-                border: 1px solid #000;
+                border: 2px solid $primary;
                 color: #000;
             }
         }
