@@ -32,7 +32,7 @@
             				<div class="details_store_image">
             				    <div v-if="currentJob.no_logo" class="store_details_image center-block">
                                     <div class="no_logo">
-                                        <h2 class="store_details_name">{{ currentJob.store_name }}</h2>
+                                        <h3 class="store_details_name">{{ currentJob.store_name }}</h3>
                                     </div>    
                                 </div>
                                 <img v-if="!currentJob.no_logo" class="store_details_image center-block" :src="currentJob.store_url" :alt="currentJob.name + ' Logo'" />
