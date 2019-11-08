@@ -1313,7 +1313,7 @@ footer {
     }
     &::-webkit-scrollbar {
 	    width: 6px;
-	    background-color: $line
+	    background-color: $line;
     }
     &::-webkit-scrollbar-thumb {
 	    background-color: $primary;
@@ -1335,7 +1335,7 @@ footer {
     }
 }
 .mapplic-element {
-    border: 1px solid $line;
+    border: 2px solid $line;
 }
 .mapplic-zoom-buttons {
     margin: 0;
