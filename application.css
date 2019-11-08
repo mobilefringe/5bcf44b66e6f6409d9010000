@@ -2505,9 +2505,9 @@ footer {
     }
     /* *** HOME *** */
     .home_banner_container {
-        .home_banner {
-            height: 500px;
-        }
+        // .home_banner {
+        //     height: 500px;
+        // }
         .home_banner_content {
             padding: 20px;
             h2 {
