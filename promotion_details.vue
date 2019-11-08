@@ -14,8 +14,8 @@
         		    <div class="promo_container promo_details_container" v-if="currentPromo">
 					    <div class="promo_img_details">
 					    {{ currentPromo.image_url }}
-					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.image_url + ')' }"></div>
-					        <img :src="currentPromo.image_url" alt="" />
+					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.img_url + ')' }"></div>
+					        <img :src="currentPromo.img_url" alt="" />
 					    </div>
 					    <div class="promo_content">
 					        <p class="promo_title" v-if="currentPromo.store">{{ currentPromo.store.name }}</p>
@@ -111,13 +111,13 @@
                                 console.log("store", this.currentPromo.is_store)
                                 if (this.currentPromo.is_store) {
                                     console.log("promo", this.currentPromo.store)
-                                    this.currentPromo.image_url = this.currentPromo.store_front_url_abs;
+                                    this.currentPromo.img_url = this.currentPromo.store_front_url_abs;
                                 } else {
-                                    this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
+                                    this.currentPromo.img_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
                                 }
                             }
                             
-                            console.log(this.currentPromo.image_url)
+                            console.log(this.currentPromo.img_url)
                         } else {
                             this.$router.replace({ path: '/promotions' });
                         }
