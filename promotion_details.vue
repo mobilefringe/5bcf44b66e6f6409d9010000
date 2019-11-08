@@ -13,6 +13,7 @@
         		<div class="site_container page_content">
         		    <div class="promo_container promo_details_container" v-if="currentPromo">
 					    <div class="promo_img_details">
+					    {{ currentPromo.image_url }}
 					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.image_url + ')' }"></div>
 					        <img :src="currentPromo.image_url" alt="" />
 					    </div>
@@ -114,7 +115,6 @@
                                 this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
                             }
                         }
-                        
                     } else {
                         this.$router.replace({ path: '/promotions' });
                     }
