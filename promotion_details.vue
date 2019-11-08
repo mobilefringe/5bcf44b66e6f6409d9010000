@@ -108,6 +108,7 @@
                         if (_.includes(this.currentPromo.image_url, 'missing')) {
                             if (this.currentPromo.store) {
                                 console.log("promo", this.currentPromo.store)
+                                this.currentPromo.image_url = this.currentPromo.store_front_url_abs;
                             } else {
                                 this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
                             }
