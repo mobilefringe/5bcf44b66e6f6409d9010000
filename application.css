@@ -625,7 +625,7 @@ footer {
         width: 100%;
         @include responsive-ratio(16,5);
         position: relative;
-        back-ground-color: #000;
+        background-color: #000;
         background-position: center center;
         background-repeat: no-repeat;    
         background-size: cover;
