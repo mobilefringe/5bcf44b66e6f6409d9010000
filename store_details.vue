@@ -76,8 +76,8 @@
                     <div class="details_store_promo">
                         <div class="promo_container promo_details_container" v-if="storePromotions" v-for="promo in storePromotions" :key="promo.id">
     					    <div class="promo_img_details">
-    					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.image_url + ')' }"></div>
-    					        <img :src="currentPromo.image_url" alt="" />
+    					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + promo.image_url + ')' }"></div>
+    					        <img :src="promo.image_url" alt="" />
     					    </div>
     					    <div class="promo_content">
     					        <p class="promo_title" v-if="promo.store">{{ promo.store.name }}</p>
