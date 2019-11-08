@@ -2015,7 +2015,7 @@ footer {
         position: absolute;
         top: 20px;
         right: 0px;
-        height: 21px;
+        height: 23px;
         z-index: 1;
         background-color: $primary;
         .store_tag_text {
