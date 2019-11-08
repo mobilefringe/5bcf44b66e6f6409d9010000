@@ -43,7 +43,7 @@
             				<div class="details_store_image">
             				    <div v-if="currentStore.no_logo" class="store_details_image center-block">
                                     <div class="no_logo">
-                                        <p class="store_details_name">{{ currentStore.name }}</p>
+                                        <h2 class="store_details_name">{{ currentStore.name }}</h2>
                                     </div>    
                                 </div>
                                 <img v-else class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
