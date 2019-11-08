@@ -116,6 +116,8 @@
                                     this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
                                 }
                             }
+                            
+                            console.log(this.currentPromo.image_url)
                         } else {
                             this.$router.replace({ path: '/promotions' });
                         }
