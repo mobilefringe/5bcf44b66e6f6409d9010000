@@ -102,22 +102,24 @@
                 },
                 updateCurrentPromo (id) {
                     this.currentPromo = this.findPromoBySlug(id);
-                    if (this.currentPromo != null || this.currentPromo != undefined){
-                        this.currentPromo.name_short = _.truncate(this.currentPromo.name, { 'length': 21, 'separator': ' ' });
-                        this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
-                        console.log("img", _.includes(this.currentPromo.image_url, 'missing'))
-                        if (_.includes(this.currentPromo.image_url, 'missing')) {
-                            console.log("store", this.currentPromo.is_store)
-                            if (this.currentPromo.is_store) {
-                                console.log("promo", this.currentPromo.store)
-                                this.currentPromo.image_url = this.currentPromo.store_front_url_abs;
-                            } else {
-                                this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
+                    this.$nextTick(function() {
+                        if (this.currentPromo != null || this.currentPromo != undefined){
+                            this.currentPromo.name_short = _.truncate(this.currentPromo.name, { 'length': 21, 'separator': ' ' });
+                            this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
+                            console.log("img", _.includes(this.currentPromo.image_url, 'missing'))
+                            if (_.includes(this.currentPromo.image_url, 'missing')) {
+                                console.log("store", this.currentPromo.is_store)
+                                if (this.currentPromo.is_store) {
+                                    console.log("promo", this.currentPromo.store)
+                                    this.currentPromo.image_url = this.currentPromo.store_front_url_abs;
+                                } else {
+                                    this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
+                                }
                             }
+                        } else {
+                            this.$router.replace({ path: '/promotions' });
                         }
-                    } else {
-                        this.$router.replace({ path: '/promotions' });
-                    }
+                    });
                 },
                 isMultiDay(promo) {
                     var timezone = this.timezone
