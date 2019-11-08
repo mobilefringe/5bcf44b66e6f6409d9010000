@@ -1316,7 +1316,7 @@ footer {
 	    background-color: #F5F5F5;
     }
     &::-webkit-scrollbar-thumb {
-	    background-color: #000;
+	    background-color: $primary;
     }
     .store_name {
         padding: 2px 10px;
