@@ -2487,7 +2487,7 @@ footer {
             margin-top: 10px;
             margin-bottom: 10px;
             width: 65%;
-            border-top: 1px solid $line;
+            border-top: 1px solid #000;
         }
         .social_icons {
             margin: 10px 0;
