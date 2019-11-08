@@ -16,7 +16,6 @@
 					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.image_url + ')' }"></div>
 					        <img :src="currentPromo.image_url" alt="" />
 					    </div>
-					    
 					    <div class="promo_content">
 					        <p class="promo_title" v-if="currentPromo.store">{{ currentPromo.store.name }}</p>
 					        <p class="promo_title" v-else>{{ property.name }}</p>
@@ -106,15 +105,12 @@
                         this.currentPromo.name_short = _.truncate(this.currentPromo.name, { 'length': 21, 'separator': ' ' });
                         this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
             
-                        if(_.includes(this.currentPromo.image_url, 'missing')) {
+                        if (_.includes(this.currentPromo.image_url, 'missing')) {
                             this.currentPromo.image_url = "https://via.placeholder.com/1560x800/757575";
                         }
-                        if(_.includes(this.currentPromo.promo_image2_url_abs, 'missing')) {
-                            this.currentPromo.promo_image2_url_abs = "https://via.placeholder.com/1560x800/757575";
-                        }
-                           
+                        
                     } else {
-                        this.$router.replace({ name: '404'});
+                        this.$router.replace({ path: '/promotions' });
                     }
                 },
                 isMultiDay(promo) {
