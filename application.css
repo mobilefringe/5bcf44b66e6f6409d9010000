@@ -2741,6 +2741,7 @@ footer {
     }
     .details_store_name {
         margin: 10px 16px 0 16px;
+        min-height: unset;
     }
     .details_store_btn {
         margin-top: 46px;
