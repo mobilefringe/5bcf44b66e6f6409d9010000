@@ -189,8 +189,8 @@
                             value.masonry_class = "grid-item--width2";
                         } else if ( _.includes([2], key) ){
                             value.masonry_class = "grid-item--width2";
-                        } else if ( _.includes([3], key) ){
-                            value.masonry_class = "grid-item--height2";
+                        // } else if ( _.includes([3], key) ){
+                        //     value.masonry_class = "grid-item--height2";
                         } else {
                             value.masonry_class = " ";
                         }
