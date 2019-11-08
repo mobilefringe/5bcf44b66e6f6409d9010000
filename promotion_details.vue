@@ -104,7 +104,7 @@
                     if (this.currentPromo != null || this.currentPromo != undefined){
                         this.currentPromo.name_short = _.truncate(this.currentPromo.name, { 'length': 21, 'separator': ' ' });
                         this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
-            
+                        console.log("img", _.includes(this.currentPromo.image_url, 'missing'))
                         if (_.includes(this.currentPromo.image_url, 'missing')) {
                             if (this.currentPromo.is_store) {
                                 console.log("promo", this.currentPromo.store)
