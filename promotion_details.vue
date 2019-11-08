@@ -106,6 +106,7 @@
                         this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
                         console.log("img", _.includes(this.currentPromo.image_url, 'missing'))
                         if (_.includes(this.currentPromo.image_url, 'missing')) {
+                            console.log("store", this.currentPromo.is_store)
                             if (this.currentPromo.is_store) {
                                 console.log("promo", this.currentPromo.store)
                                 this.currentPromo.image_url = this.currentPromo.store_front_url_abs;
