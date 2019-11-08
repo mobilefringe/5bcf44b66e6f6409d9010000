@@ -150,7 +150,10 @@ hr {
     overflow: hidden;
 }
 .accessibility {
-    display: none;
+    margin: 0;
+    height: 0;
+    position: absolute;
+    visibility: hidden;
 }
 .max_width {
     max-width: 100%;
