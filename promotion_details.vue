@@ -13,7 +13,6 @@
         		<div class="site_container page_content">
         		    <div class="promo_container promo_details_container" v-if="currentPromo">
 					    <div class="promo_img_details">
-					    {{ currentPromo.image_url }}
 					        <div class="blur-overlay" v-bind:style="{ backgroundImage: 'url(' + currentPromo.img_url + ')' }"></div>
 					        <img :src="currentPromo.img_url" alt="" />
 					    </div>
@@ -106,12 +105,9 @@
                         if (this.currentPromo != null || this.currentPromo != undefined){
                             this.currentPromo.name_short = _.truncate(this.currentPromo.name, { 'length': 21, 'separator': ' ' });
                             this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
-                            
-                            console.log("img", _.includes(this.currentPromo.image_url, 'missing'))
+
                             if (_.includes(this.currentPromo.image_url, 'missing')) {
-                                console.log("store", this.currentPromo.is_store)
                                 if (this.currentPromo.is_store) {
-                                    console.log("promo", this.currentPromo)
                                     this.currentPromo.img_url = this.currentPromo.store.store_front_url_abs;
                                 } else {
                                     this.currentPromo.img_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
@@ -119,8 +115,6 @@
                             } else {
                                 this.currentPromo.img_url = this.currentPromo.image_url;
                             }
-                            
-                            console.log("promo img", this.currentPromo.img_url)
                         } else {
                             this.$router.replace({ path: '/promotions' });
                         }
