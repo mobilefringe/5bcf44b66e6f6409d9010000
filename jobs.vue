@@ -11,7 +11,6 @@
         			</div>
         		</div>
         		<div class="site_container">
-        		<!--HI {{promotions.length}}-->
         		    <div v-if="promotions.length == 0" class="row no_promos">
         				<div class="col-md-12"> 
         					<p>{{$t("jobs_page.no_job_message")}}</p>
@@ -24,8 +23,8 @@
     		            <div class="jobs_right">
     		                <div class="job_detail_content">
     		                    <h2 class="visible_phone jobs_store_name">{{ promo.store_name }}</h2> 
-        		                <p class="job_position bold" v-if="locale=='en-ca'">{{ $t("jobs_page.position") }}: {{ promo.name }}</p>
-    					        <p class="job_position bold" v-else>{{ $t("jobs_page.position") }}: {{ promo.name_2 }}</p>
+        		                <h3 class="job_position bold" v-if="locale=='en-ca'">{{ $t("jobs_page.position") }}: {{ promo.name }}</h3>
+    					        <h3 class="job_position bold" v-else>{{ $t("jobs_page.position") }}: {{ promo.name_2 }}</h3>
     					        <p class="job_position">{{ checkJobType(promo) }}</p>
     							<p class="job_date">{{ $t("jobs_page.end_date") }}: {{promo.end_date | moment("MMMM DD, YYYY", timezone)}}</p>
     							<router-link :to="'/jobs/'+ promo.slug" >
