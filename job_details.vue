@@ -109,7 +109,7 @@
                             this.currentJob.store_website = this.currentJob.store.website
                         
                             // STORE LOGO
-                            if (_.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
+                            if (this.currentJob.store && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
                                 // this.currentJob.no_logo = true
                                 this.currentJob.store_url = '//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png';
                             } else {
