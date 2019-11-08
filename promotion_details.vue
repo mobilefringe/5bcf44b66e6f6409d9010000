@@ -106,7 +106,11 @@
                         this.currentPromo.name_short_2 = _.truncate(this.currentPromo.name_2, { 'length': 21, 'separator': ' ' });
             
                         if (_.includes(this.currentPromo.image_url, 'missing')) {
-                            this.currentPromo.image_url = "https://via.placeholder.com/1560x800/757575";
+                            if (this.currentPromo.store) {
+                                
+                            } else {
+                                this.currentPromo.image_url = "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
+                            }
                         }
                         
                     } else {
