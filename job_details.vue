@@ -109,18 +109,17 @@
                             this.currentJob.store_website = this.currentJob.store.website
                         
                             // STORE LOGO
-                            if (this.currentJob.store && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
-                                // this.currentJob.no_logo = true
-                                this.currentJob.store_url = '//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png';
+                            if (_.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
+                                this.currentJob.no_logo = true
                             } else {
-                                // this.currentJob.no_logo = false
+                                this.currentJob.no_logo = false
                                 this.currentJob.store_url = this.currentJob.store.image_url;
                             }
 
                         } else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
                             this.currentJob.no_logo = false;
-                            this.currentJob.store_url =  "https://via.placeholder.com/400x400/757575";
+                            this.currentJob.store_url =  "//codecloud.cdn.speedyrails.net/sites/5bcf44b66e6f6409d9010000/image/png/1573070939863/cc_default_logo.png";
                             this.currentJob.store_name = property_name;
                         }
                     } else {
