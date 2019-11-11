@@ -2126,7 +2126,7 @@ footer {
 .details_store_name {
     margin-bottom: 36px;
     margin-left: 16px;
-    padding: 45px 80px 20px 20px;
+    padding: 30px 80px 20px 20px;
     width: calc(100% - 32px);
     min-height: 336px;
     position: relative;
@@ -2136,7 +2136,7 @@ footer {
     background: $primary;
     color: #FFF;
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .store_category {
         margin-bottom: 30px;
@@ -2144,7 +2144,7 @@ footer {
         line-height: 1.31rem;    
     }
     .store_phone {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         span {
             padding-left: 30px;
         }
