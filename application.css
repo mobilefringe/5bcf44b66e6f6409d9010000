@@ -2135,6 +2135,9 @@ footer {
     border: solid 3px #FFF;
     background: $primary;
     color: #FFF;
+    h2 {
+        margin-bottom: 20px;
+    }
     .store_category {
         margin-bottom: 30px;
         font-size: 1.25rem;
