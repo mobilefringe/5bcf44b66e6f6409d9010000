@@ -201,20 +201,20 @@
                         }
                         
                         // PROMOTIONS
-                        // var temp_promo = [];
-                        // var promos = this.currentStore.promotions;
-                        // _.forEach(promos, function(value, key) {
-                        //     var current_promo = vm.findPromoById(value);
-                        //     if (_.includes(current_promo.image_url, 'missing')) {
-                        //         current_promo.image_url = "https://placehold.it/1560x800/757575";
-                        //     }
+                        var temp_promo = [];
+                        var promos = this.currentStore.promotions;
+                        _.forEach(promos, function(value, key) {
+                            var current_promo = vm.findPromoById(value);
+                            if (_.includes(current_promo.image_url, 'missing')) {
+                                current_promo.image_url = "https://placehold.it/1560x800/757575";
+                            }
                             
-                        //     current_promo.name_short = _.truncate(current_promo.name, { 'length': 21, 'separator': ' ' });
-                        //     current_promo.name_short_2 = _.truncate(current_promo.name_2, { 'length': 21, 'separator': ' ' });
+                            current_promo.name_short = _.truncate(current_promo.name, { 'length': 21, 'separator': ' ' });
+                            current_promo.name_short_2 = _.truncate(current_promo.name_2, { 'length': 21, 'separator': ' ' });
     
-                        //     temp_promo.push(current_promo);
-                        // }); 
-                        // this.storePromotions = temp_promo;
+                            temp_promo.push(current_promo);
+                        }); 
+                        this.storePromotions = temp_promo;
                     }
                 }
             }
