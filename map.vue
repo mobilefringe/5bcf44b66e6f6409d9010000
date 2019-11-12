@@ -84,7 +84,6 @@
                     initZoom.y = 0.5;
                     initZoom.zoom = 1;
                     all_stores.push(initZoom)
-                    console.log("stores", all_stores)
                     return all_stores
                 },
                 getSVGMap() {
