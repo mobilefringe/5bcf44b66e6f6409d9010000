@@ -116,8 +116,10 @@
                     if (result.is_store) {
                         if (result.store) {
                             var storeCategory = result.store.categories[0];
-                            category = this.findCategoryById(storeCategory)
-                            return category.name    
+                            if (storeCategory) {
+                                category = this.findCategoryById(storeCategory)
+                                return category.name    
+                            }
                         } else {
                             var storeCategory = result.categories[0];
                             if (storeCategory) {
