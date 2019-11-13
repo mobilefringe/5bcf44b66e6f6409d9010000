@@ -115,18 +115,16 @@
                     console.log("result", result)
                     if (result.is_store) {
                         if (result.store) {
-                            var storeCategory = result.store.categories[0];
-                            if (storeCategory) {
+                            if (result.store.categories) {
+                                var storeCategory = result.store.categories[0];
                                 category = this.findCategoryById(storeCategory)
                                 return category.name    
                             }
                         } else {
                             if (result.categories){
                                 var storeCategory = result.categories[0];
-                                if (storeCategory) {
-                                    category = this.findCategoryById(storeCategory)
-                                    return category.name    
-                                }
+                                category = this.findCategoryById(storeCategory)
+                                return category.name    
                             }
                         }
                     } else {
