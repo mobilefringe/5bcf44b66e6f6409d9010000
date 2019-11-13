@@ -121,10 +121,12 @@
                                 return category.name    
                             }
                         } else {
-                            var storeCategory = result.categories[0];
-                            if (storeCategory) {
-                                category = this.findCategoryById(storeCategory)
-                                return category.name    
+                            if (result.categories){
+                                var storeCategory = result.categories[0];
+                                if (storeCategory) {
+                                    category = this.findCategoryById(storeCategory)
+                                    return category.name    
+                                }
                             }
                         }
                     } else {
