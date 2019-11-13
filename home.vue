@@ -160,6 +160,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'findMetaDataByPath',
                     'getPropertyHours',
                     'getPropertyHolidayHours',
                     'processedStores'
