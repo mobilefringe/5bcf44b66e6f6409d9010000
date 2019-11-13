@@ -9,7 +9,7 @@
                             <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
                             <div class="row result_container_row" v-for="(result, index) in searchResults" :key="index">
                                 <div v-if="result.is_store" class="col-sm-2">
-                                    <div v-if="result.image_url && _.includes(result.image_url,'missing') || (!result.image_url && _.includes(result.store.store_front_url_abs, 'missing'))">
+                                    <div v-if="result.image_url && _.includes(result.image_url,'missing') || (!result.image_url && _.includes(result.store.store_front_url_abs, 'missing')) || (result.image_url && _.includes(result.store_front_url_abs, 'missing'))">
                                         <div class="no_logo">
                                             <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">
                                             <h4 class="store_details_name">
