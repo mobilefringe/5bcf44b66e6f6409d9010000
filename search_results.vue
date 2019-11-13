@@ -105,7 +105,7 @@
                             Array.isArray(this.$route.params.results)
                         ) {
                             this.searchResults = this.$route.params.results;
-                            console.log("results", results)
+                            console.log("results", this.searchResults)
                             this.searchQuery = this.$route.query.searchQuery;
                         }
                     } else {
