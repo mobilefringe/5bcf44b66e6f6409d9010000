@@ -18,10 +18,10 @@
                                             </h4>
                                         </div>    
                                     </div> 
-                                    <div v-else>
-                                        <img v-if="result.store" class="result_logo" :src="result.store_front_url_abs"/>
-                                        <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
-                                    </div>
+                                    <!--<div v-else>-->
+                                    <!--    <img v-if="result.store" class="result_logo" :src="result.store_front_url_abs"/>-->
+                                    <!--    <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>-->
+                                    <!--</div>-->
                                 </div>
                                 <div v-else class="col-sm-2 store_details_image center-block">
                                     <img class="result_logo" src="//codecloud.cdn.speedyrails.net/sites/5bbfac0c6e6f6411b3040000/image/png/1539190868000/mm_default.png"/>    
