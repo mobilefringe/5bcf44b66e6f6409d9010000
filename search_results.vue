@@ -9,15 +9,15 @@
                             <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
                             <div class="row result_container_row" v-for="(result, index) in searchResults" :key="index">
                                 <div v-if="result.is_store" class="col-sm-2 store_details_image center-block">
-                                    <!--<div v-if="result.image_url && _.includes(result.image_url,'missing') || (!result.image_url && _.includes(result.store.store_front_url_abs, 'missing')) || (result.image_url && _.includes(result.store.store_front_url_abs, 'missing'))">-->
-                                    <!--    <div class="no_logo">-->
-                                    <!--        <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">-->
-                                    <!--        <h4 class="store_details_name">-->
-                                    <!--            <span v-if="result.store_front_url_abs">{{result.name}}</span>-->
-                                    <!--            <span v-else>{{ result.store.name }}</span>-->
-                                    <!--        </h4>-->
-                                    <!--    </div>    -->
-                                    <!--</div> -->
+                                    <div v-if="result.image_url && _.includes(result.image_url,'missing') || (!result.image_url && _.includes(result.store.store_front_url_abs, 'missing')) || (result.image_url && _.includes(result.store.store_front_url_abs, 'missing'))">
+                                        <div class="no_logo">
+                                            <img src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1536092029690/transparent_logo.png">
+                                            <!--<h4 class="store_details_name">-->
+                                            <!--    <span v-if="result.store_front_url_abs">{{result.name}}</span>-->
+                                            <!--    <span v-else>{{ result.store.name }}</span>-->
+                                            <!--</h4>-->
+                                        </div>    
+                                    </div> 
                                     <div>
                                         <img v-if="result.store" class="result_logo" :src="result.store_front_url_abs"/>
                                         <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
