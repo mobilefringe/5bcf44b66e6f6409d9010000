@@ -78,6 +78,7 @@
                 if (this.$route.params.results == null && this.$route.params.results == undefined) {
                     this.$router.push("/");
                 }
+                console.lo
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -104,6 +105,7 @@
                             Array.isArray(this.$route.params.results)
                         ) {
                             this.searchResults = this.$route.params.results;
+                            console.log("results", results)
                             this.searchQuery = this.$route.query.searchQuery;
                         }
                     } else {
