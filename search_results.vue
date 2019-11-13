@@ -120,10 +120,11 @@
                             return category.name    
                         } else {
                             var storeCategory = result.categories[0];
-                            category = this.findCategoryById(storeCategory)
-                            return category.name    
+                            if (storeCategory) {
+                                category = this.findCategoryById(storeCategory)
+                                return category.name    
+                            }
                         }
-                        
                     } else {
                         
                     }
