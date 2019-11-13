@@ -112,7 +112,7 @@
                     }
                 },
                 getCategory(result) {
-                    console.log(result)
+                    console.log("result", result)
                     if (result.is_store) {
                         if (result.store) {
                             var storeCategory = result.store.categories[0];
