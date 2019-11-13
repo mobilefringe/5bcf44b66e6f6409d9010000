@@ -18,7 +18,7 @@
                                     <!--        </h4>-->
                                     <!--    </div>    -->
                                     <!--</div> -->
-                                    <div v-else>
+                                    <div>
                                         <img v-if="result.store" class="result_logo" :src="result.store_front_url_abs"/>
                                         <img v-else-if="result.store_front_url_abs" class="result_logo" :src="result.store_front_url_abs"/>
                                     </div>
