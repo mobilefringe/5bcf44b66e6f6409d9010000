@@ -197,7 +197,7 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                         iconClass: "fa fa-facebook-square facebook"
                     },
                     {
-                        name: "Twitter",
+                        name: "Instagram",
                         url: "https://www.instagram.com/countryclubmall",
                         iconClass: "fa fa-instagram"
                     }
