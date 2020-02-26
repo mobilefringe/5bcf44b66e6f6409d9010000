@@ -193,13 +193,13 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                 social_media: [
                     {
                         name: "Facebook",
-                        url: "https://www.facebook.com",
+                        url: "www.facebook.com/countryclubmall",
                         iconClass: "fa fa-facebook-square facebook"
                     },
                     {
                         name: "Twitter",
-                        url: "https://twitter.com",
-                        iconClass: "fa fa-twitter twitter"
+                        url: "https://www.instagram.com/countryclubmall",
+                        iconClass: "fa fa-instagram"
                     }
                 ],
                 search_result : null,
