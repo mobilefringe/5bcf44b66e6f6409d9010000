@@ -11,20 +11,20 @@
         			</div>
         		</div>
         		<div class="site_container">
-                    <div class="program_header_container hidden_phone">
-                        <router-link to="/gift-cards">
-        				    <div class="program_button_container animated_btn">
-        				        {{ $t("programs_page.gift_title") }}
-        				    </div>
-        				</router-link>
-        				<div class="program_button_container active">
-        				    {{ $t("programs_page.kids_club_title") }}
-        				</div>
-        			</div>
-        			<div class="visible_phone margin_20">
-        			    <label style="display: none;" for="pageSelect">Select a Page</label>
-        				<v-select v-model="selected" :options="pageOptions" :searchable="false" :on-change="selectPage" class="category-select" inputId="pageSelect"></v-select>
-        			</div>
+           <!--         <div class="program_header_container hidden_phone">-->
+           <!--             <router-link to="/gift-cards">-->
+        			<!--	    <div class="program_button_container animated_btn">-->
+        			<!--	        {{ $t("programs_page.gift_title") }}-->
+        			<!--	    </div>-->
+        			<!--	</router-link>-->
+        			<!--	<div class="program_button_container active">-->
+        			<!--	    {{ $t("programs_page.kids_club_title") }}-->
+        			<!--	</div>-->
+        			<!--</div>-->
+        			<!--<div class="visible_phone margin_20">-->
+        			<!--    <label style="display: none;" for="pageSelect">Select a Page</label>-->
+        			<!--	<v-select v-model="selected" :options="pageOptions" :searchable="false" :on-change="selectPage" class="category-select" inputId="pageSelect"></v-select>-->
+        			<!--</div>-->
         			<!--<div v-if="pageHeader" class="row">-->
         			<!--    <div class="col-md-12">-->
         			<!--        <h4 class="margin_40 center bold" v-html="pageHeader.body"></h4>-->
