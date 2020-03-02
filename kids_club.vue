@@ -75,21 +75,11 @@
                     } else {
                         this.pageBanner = { "image_url": "" }
                     }
-                    
-                    // if (response && response[1]) {
-                    //     try {
-                    //         this.pageHeader = response[1].data
-                    //         this.pageBody = response[1].data.subpages[0]
-                    //         this.pageImage = "//www.mallmaverick.com"
-                    //     } catch (e) {
-                            
-                    //     }
-                    // }
+
                     if (response && response[1]) {
                         try {
                             this.pageBody = response[1].data
-                            // this.pageBody = response[1].data.subpages[0]
-                            if(this.pageBody.image_url){
+                            if (this.pageBody.image_url){
                                 this.pageImage = "//www.mallmaverick.com" + this.pageBody.image_url;
                             }
                         } catch (e) {
@@ -110,7 +100,10 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/"+Site.subdomain+"-kids-club.json"})]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "repos"), 
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + Site.subdomain + "-kids-club.json"})
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
