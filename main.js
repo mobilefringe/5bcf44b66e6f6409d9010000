@@ -141,10 +141,10 @@ require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vu
                                 name: "nav.contact",
                                 href: "/contact-us"
                             },
-                            // {
-                            //     name: "nav.mall_info",
-                            //     href: "/mall-information"
-                            // },
+                            {
+                                name: "nav.mall_info",
+                                href: "/mall-information"
+                            },
                             {
                                 name: "nav.hours",
                                 href: "/hours"
