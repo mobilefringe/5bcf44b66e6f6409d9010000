@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
-                                <p class="caps center">Monday - Friday</p>
+                                <p class="caps center">Monday - Thursday</p>
                                 <p v-for="hour in weekdayHours" class="center">
                                     {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
                                 </p>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
-                                <p class="caps center">Saturday</p>
+                                <p class="caps center">Friday & Saturday</p>
                                 <p v-for="hour in saturdayHours" class="center">
                                     {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
                                 </p>
