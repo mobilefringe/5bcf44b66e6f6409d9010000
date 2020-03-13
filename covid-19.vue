@@ -107,6 +107,7 @@
         margin-bottom: 30px;
         text-transform: uppercase;
         color: unset;
+        font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;;
         
     }
     
@@ -135,7 +136,7 @@
         font-size: 24px;
         margin: 60px 0;
         font-weight: bold;
-        font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;;
+        font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
 
     }
     h3 {
