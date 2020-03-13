@@ -145,6 +145,7 @@
     h3 {
         font-size: 26px;
         text-transform: uppercase;
+        font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;;
     }
 
     .center_text {
