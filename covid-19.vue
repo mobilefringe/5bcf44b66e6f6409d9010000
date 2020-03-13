@@ -106,6 +106,7 @@
         font-size: 26px;
         margin-bottom: 30px;
         text-transform: uppercase;
+        color: unset;
         
     }
     
