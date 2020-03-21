@@ -19,13 +19,24 @@
                     <div class="row hours_row">
                         <div class="col-sm-12 col-lg-3">
                             <div class="hours_container todays_hours">
-                                <p v-if="hour.is_open" v-for="hour in todaysHours" class="caps center">Open Now</p>
-                                <p v-if="hour.is_open" v-for="hour in todaysHours" class="center">
-                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                <p v-if="todaysHours && !todaysHours.is_closed" class="caps center">Open Now</p>
+                                <p v-if="todaysHours && !todaysHours.is_closed" class="center">
+                                    {{todaysHours.open_time | moment("h:mm a", timezone)}} - {{todaysHours.close_time | moment("h:mm a", timezone)}}    
                                 </p>
                                 <p v-else class="center">Closed</p>
                             </div>
                         </div>
+                    
+                        <!--<div class="col-sm-12 col-lg-3">-->
+                        
+                        <!--    <div class="hours_container todays_hours">-->
+                        <!--        <p v-if="hour.is_open" v-for="hour in todaysHours" class="caps center">Open Now</p>-->
+                        <!--        <p v-if="hour.is_open" v-for="hour in todaysHours" class="center">-->
+                        <!--            {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
+                        <!--        </p>-->
+                        <!--        <p v-else class="center">Closed</p>-->
+                        <!--    </div>-->
+                        <!--</div>-->
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
                                 <p class="caps center">Monday - Thursday</p>
