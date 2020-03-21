@@ -115,6 +115,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'getTodayHours',
                     'getPropertyHours',
                     'getPropertyHolidayHours',
                     'findRepoByName'
