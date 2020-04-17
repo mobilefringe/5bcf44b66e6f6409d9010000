@@ -42,10 +42,6 @@
                                     {{ saturdayHours.open_time | moment("h:mm a", timezone) }} - {{ saturdayHours.close_time | moment("h:mm a", timezone) }}    
                                 </p>
                                 <p v-else class="center">Closed</p>
-                                
-                                <!--<p v-for="hour in saturdayHours" class="center">-->
-                                <!--    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
-                                <!--</p>-->
                             </div>
                         </div>
                         <div class="col-sm-4 col-lg-3">
@@ -55,10 +51,6 @@
                                     {{ sundayHours.open_time | moment("h:mm a", timezone) }} - {{ sundayHours.close_time | moment("h:mm a", timezone) }}    
                                 </p>
                                 <p v-else class="center">Closed</p>
-                                
-                                <!--<p v-for="hour in sundayHours" class="center">-->
-                                <!--    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
-                                <!--</p>-->
                             </div>
                         </div>
                     </div>
