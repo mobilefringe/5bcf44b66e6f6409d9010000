@@ -12,7 +12,7 @@
                         </span>
                     </div>
                     <div class="header_hours">
-                        <p class="open_now"><span v-if="todays_hours.is_closed == null || !todays_hours.is_closed ">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed")}}</span> <span v-if="todays_hours.is_closed == null || !todays_hours.is_closed "><span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}} </span></p>
+                        <!--<p class="open_now"><span v-if="todays_hours.is_closed == null || !todays_hours.is_closed ">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed")}}</span> <span v-if="todays_hours.is_closed == null || !todays_hours.is_closed "><span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}} </span></p>-->
                         
                         <p v-if="todays_hours.is_closed == null || !todays_hours.is_closed">Open Now: {{hour.open_time | moment("h a", timezone)}} - {{hour.close_time | moment("h a", timezone)}}</p>
                         <p v-else>Closed</p>
