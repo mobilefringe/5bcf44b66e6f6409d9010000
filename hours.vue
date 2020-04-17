@@ -29,22 +29,23 @@
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
                                 <p class="caps center">Monday - Thursday</p>
-                                 <p v-if="weekdayHours && !weekdayHours.is_closed" class="center">
+                                <p v-if="weekdayHours && !weekdayHours.is_closed" class="center">
                                     {{weekdayHours.open_time | moment("h:mm a", timezone)}} - {{weekdayHours.close_time | moment("h:mm a", timezone)}}    
                                 </p>
                                 <p v-else class="center">Closed</p>
-                                <!--<p v-for="hour in weekdayHours" class="center">-->
-                                
-                                <!--    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
-                                <!--</p>-->
                             </div>
                         </div>
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
                                 <p class="caps center">Friday & Saturday</p>
-                                <p v-for="hour in saturdayHours" class="center">
-                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                <p v-if="weekdayHours && !weekdayHours.is_closed" class="center">
+                                    {{weekdayHours.open_time | moment("h:mm a", timezone)}} - {{weekdayHours.close_time | moment("h:mm a", timezone)}}    
                                 </p>
+                                <p v-else class="center">Closed</p>
+                                
+                                <!--<p v-for="hour in saturdayHours" class="center">-->
+                                <!--    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
+                                <!--</p>-->
                             </div>
                         </div>
                         <div class="col-sm-4 col-lg-3">
@@ -127,16 +128,21 @@
                 ]),
                 weekdayHours() {
                     var weekday_hours = this.getPropertyHours
-                    var monday = _.filter(weekday_hours, function(o) { return o.day_of_week == 1 });
-                    monday = monday[0];
-                    console.log("monday",monday)
-                    return monday
+                    var weekday = _.filter(weekday_hours, function(o) { return o.day_of_week == 1 });
+                    weekday = weekday[0];
+                    return weekday
                 },
                 saturdayHours() {
-                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 6 });
+                    var weekend_hours = this.getPropertyHours;
+                    var weekend = _.filter(weekend_hours, function(o) { return o.day_of_week == 6 });
+                    weekend = weekend[0];
+                    return weekend;
                 },
                 sundayHours() {
-                    return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 0 });
+                    var sunday_hours = this.getPropertyHours;
+                    var sunday = _.filter(sunday_hours, function(o) { return o.day_of_week == 0 });
+                    sunday = sunday[0];
+                    return sunday;
                 },
                 holidayHours () {
                     return _.sortBy(this.getPropertyHolidayHours, function(o) { return o.holiday_date });
