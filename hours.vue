@@ -38,8 +38,8 @@
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
                                 <p class="caps center">Friday & Saturday</p>
-                                <p v-if="weekdayHours && !weekdayHours.is_closed" class="center">
-                                    {{weekdayHours.open_time | moment("h:mm a", timezone)}} - {{weekdayHours.close_time | moment("h:mm a", timezone)}}    
+                                <p v-if="saturdayHours && !saturdayHours.is_closed" class="center">
+                                    {{ saturdayHours.open_time | moment("h:mm a", timezone) }} - {{ saturdayHours.close_time | moment("h:mm a", timezone) }}    
                                 </p>
                                 <p v-else class="center">Closed</p>
                                 
@@ -51,9 +51,14 @@
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
                                 <p class="caps center">Sunday</p>
-                                <p v-for="hour in sundayHours" class="center">
-                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                <p v-if="sundayHours && !sundayHours.is_closed" class="center">
+                                    {{ sundayHours.open_time | moment("h:mm a", timezone) }} - {{ sundayHours.close_time | moment("h:mm a", timezone) }}    
                                 </p>
+                                <p v-else class="center">Closed</p>
+                                
+                                <!--<p v-for="hour in sundayHours" class="center">-->
+                                <!--    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
+                                <!--</p>-->
                             </div>
                         </div>
                     </div>
