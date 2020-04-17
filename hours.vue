@@ -124,6 +124,7 @@
                 weekdayHours() {
                     var weekday_hours = this.getPropertyHours
                     var monday = _.filter(weekday_hours, function(o) { return o.day_of_week == 1 });
+                    monday = monday[0];
                     console.log("monday",monday)
                     return monday
                 },
