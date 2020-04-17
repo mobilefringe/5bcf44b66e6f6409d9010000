@@ -29,10 +29,14 @@
                         <div class="col-sm-4 col-lg-3">
                             <div class="hours_container">
                                 <p class="caps center">Monday - Thursday</p>
-                                <p v-for="hour in weekdayHours" class="center">
-                                
-                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                 <p v-if="weekdayHours && !weekdayHours.is_closed" class="center">
+                                    {{weekdayHours.open_time | moment("h:mm a", timezone)}} - {{weekdayHours.close_time | moment("h:mm a", timezone)}}    
                                 </p>
+                                <p v-else class="center">Closed</p>
+                                <!--<p v-for="hour in weekdayHours" class="center">-->
+                                
+                                <!--    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    -->
+                                <!--</p>-->
                             </div>
                         </div>
                         <div class="col-sm-4 col-lg-3">
