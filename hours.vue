@@ -30,6 +30,7 @@
                             <div class="hours_container">
                                 <p class="caps center">Monday - Thursday</p>
                                 <p v-for="hour in weekdayHours" class="center">
+                                
                                     {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
                                 </p>
                             </div>
@@ -122,7 +123,8 @@
                 ]),
                 weekdayHours() {
                     var weekday_hours = this.getPropertyHours
-                    return _.filter(weekday_hours, function(o) { return o.day_of_week == 1 });
+                    var monday = _.filter(weekday_hours, function(o) { return o.day_of_week == 1 });
+                    return monday
                 },
                 saturdayHours() {
                     return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 6 });
