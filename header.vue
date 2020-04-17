@@ -201,6 +201,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'getTodayHours',
                     'getPropertyHours',
                     'getPropertyHolidayHours',
                     'processedStores',
