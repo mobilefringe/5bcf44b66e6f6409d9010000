@@ -276,7 +276,7 @@
                     }
                 }
             },
-            metaInfo () {
+            /*metaInfo () {
                 return {
                     title: this.meta.meta_title,
                     meta: [
@@ -287,7 +287,7 @@
                         { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
                     ]
                 }
-            }
+            }*/
         })
     })
 </script>
