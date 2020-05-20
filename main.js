@@ -14,7 +14,7 @@ require.config({
         'text': 'https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min',
         'json': 'https://unpkg.com/requirejs-plugins-current@1.0.3/src/json',
         'js-cookie': 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min',
-        //'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
+        'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
         'vue-head': 'https://cdn.rawgit.com/ktquez/vue-head/master/vue-head',
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
@@ -50,12 +50,13 @@ require.config({
     }
 });
 
-require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vue-i18n", "locales", "jquery", "moment", "moment-timezone", "vue-moment", "vue-head", "vuex-router-sync", "vue-social-sharing", "vue-select", "vue!search-component", "vue-simple-spinner", "vue!loader.vue", "vue!header.vue", "vue!footer.vue"], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, $, moment, tz, VueMoment, VueHead, VuexRouterSync, SocialSharing, VueSelect, Spinner, Loader, HeaderComponent, FooterComponent) {
+require(["Vue", "vuex", "vue2-filters", "vue_router", "routes", "datastore", "vue-i18n", "locales", "jquery", "moment", "moment-timezone", "vue-moment", "vue-head", "vuex-router-sync", "vue-social-sharing", "vue-select", "vue!search-component", "vue-simple-spinner", "vue!loader.vue", "vue!header.vue", "vue!footer.vue", "vue-meta"], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, $, moment, tz, VueMoment, VueHead, VuexRouterSync, SocialSharing, VueSelect, Spinner, Loader, HeaderComponent, FooterComponent, vueMeta) {
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     Vue.use(SocialSharing);
     Vue.use(VueHead);
+    Vue.use(vueMeta)
     
     /* initialize router */
     const router = new VueRouter({
